@@ -111,7 +111,7 @@ header {
   }
 }
 
-     /* ここから修正 */
+/* ここから修正 */
 .top-image {
   height: 100vh; /* ビューポートの高さ全体に広げる */
   display: flex; /* Flexboxで子要素を中央に配置 */
@@ -120,11 +120,11 @@ header {
   position: relative; /* imgのabsolute配置の基準 */
   overflow: hidden; /* 画像がはみ出さないように隠す */
 
-  /* 背景画像の設定 */
-  background-image: url('/39_20250622223803.webp'); /* ぼかしたい画像のパス */
+  /* 背景画像の設定 - ここに別のぼかし用画像のパスを指定 */
+  background-image: url('path/to/your/blurred_background_image.webp'); /* ★ここを別の画像パスに！★ */
   background-size: cover; /* コンテナ全体を覆うように拡大縮小 */
   background-position: center; /* 中央に配置 */
-  filter: blur(8px); /* 背景をぼかす */
+  filter: blur(8px); /* 背景をぼかす（値は調整してください） */
   -webkit-filter: blur(8px); /* Safari対応 */
 }
 
@@ -138,8 +138,7 @@ header {
   transition: opacity 1s ease, transform 1.5s ease;
   z-index: 1; /* 背景よりも手前に表示 */
 
-  /* img自体にはぼかしを適用しないため、filterはここには書かない */
-  /* transform: translate(-50%, -50%) が不要になります */
+  /* 真ん中の画像はぼかさないので、filterは適用しない */
 }
 
 body.loaded .top-image img {
