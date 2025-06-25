@@ -119,22 +119,22 @@ header {
       align-items: center; /* 垂直方向の中央揃え */
       position: relative; /* imgのabsolute配置の基準 */
       overflow: hidden; /* 画像がはみ出さないように隠す */
-
-      /* 背景画像の設定 - ここに別のぼかし用画像のパスを指定 */
-      background-image: url('/img/背景.webp'); /* ★ここを別の画像パスに！★ */
-      background-size: cover; /* コンテナ全体を覆うように拡大縮小 */
-      background-position: center; /* 中央に配置 */
-      filter: blur(8px); /* 背景をぼかす（値は調整してください） */
-      -webkit-filter: blur(8px); /* Safari対応 */
     }
 
-    .top-image img {
+    .top-image img1 {
       width: auto; /* 元の幅を維持 */
       height: 100vh; /* ビューポートの高さに合わせる */
       display: block;
       object-fit: contain; /* アスペクト比を維持しつつ、コンテナ内に収める */
       /* 初期アニメーション関連のプロパティを削除 */
       z-index: 1; /* 背景よりも手前に表示 */
+    }
+
+    .top-image img2 {
+      background-size: cover; /* コンテナ全体を覆うように拡大縮小 */
+      background-position: center; /* 中央に配置 */
+      filter: blur(8px); /* 背景をぼかす（値は調整してください） */
+      -webkit-filter: blur(8px); /* Safari対応 */
     }
 
     body.loaded .top-image img {
@@ -314,7 +314,8 @@ header {
 
 
   <div class="top-image">
-    <img src="/39_20250622223803.webp" alt="神日京国のイメージ" id="parallax">
+    <img class="img1" src="/39_20250622223803.webp" alt="神日京国のイメージ" id="parallax">
+    <img class="img2" src="/img/haikei1.webp" alt="神日京国のイメージ" id="parallax">
   </div>
 
   <section class="hero-text">
