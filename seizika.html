@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>神日京国 政治家紹介</title>
+  <link rel="icon" href="favicon.png" type="image/svg+xml">
+  <meta name="description" content="雑談・趣味・ゲームを楽しめるDiscordサーバー『神日京国』の公式ページ。誰でも参加歓迎！安全で活発なコミュニティへようこそ。">
+  <meta property="og:title" content="神日京国 - Discordサーバー" />
+  <meta property="og:description" content="雑談・趣味・ゲームを楽しめるDiscordサーバー『神日京国』の公式ページ。誰でも参加歓迎！安全で活発なコミュニティへようこそ。" />
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1385647827224625325/1386477074415616121/39_20250623074355.png" />
+  <meta property="og:url" content="https://あなたのサイトURL" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="神日京国 - Discordサーバー">
+  <meta name="twitter:description" content="雑談・趣味・ゲームを楽しめるDiscordサーバー『神日京国』の公式ページ。誰でも参加歓迎！安全で活発なコミュニティへようこそ。">
+  <meta name="twitter:image" content="https://cdn.discordapp.com/attachments/1385647827224625325/1386477074415616121/39_20250623074355.png">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans JP', sans-serif;
+      scroll-behavior: smooth;
+      background-color: #f8f9fa;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #001f3f;
+      color: white;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo-text {
+      color: white; /* テキスト色を白に設定 */
+      text-decoration: none; /* アンダーラインを消す */
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links a i {
+      margin-right: 6px;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .desktop-menu {
+        display: none;
+        width: 100%;
+        background-color: #001f3f;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        flex-direction: column;
+      }
+
+      .desktop-menu.open {
+        display: flex;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+      }
+
+      .nav-links a {
+        padding: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <i class="fas fa-mountain-sun"></i> <a href="/" class="logo-text">神日京国</a>
+    </div>
+
+    <!-- スマホ用ハンバーガーボタン -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- ナビゲーションメニュー -->
+    <nav class="desktop-menu" id="nav-menu">
+       <ul class="nav-links">
+         <li><a href="/"><i class="fas fa-home"></i> ホーム</a></li>
+        <li><a href="kuni"><i class="fas fa-flag"></i> 国紹介</a></li>
+        <li><a href="kankou"><i class="fas fa-map-marked-alt"></i> 観光</a></li>
+        <li><a href="syoukai"><i class="fas fa-info-circle"></i> 紹介</a></li>
+        <li><a href="tokutyou"><i class="fas fa-star"></i> 特徴</a></li>
+        <li><a href="https://discord.com/invite/haP3jjVWku"><i class="fab fa-discord"></i> 参加</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="politicians" style="padding: 3rem 1rem; background-color: #fff;">
+  <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 3rem; color: #001f3f;">政治家紹介</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+
+    <!-- テンプレ：カード -->
+    <div class="politician-card">
+      <img src="https://via.placeholder.com/250x250.png?text=内閣総理大臣" alt="内閣総理大臣">
+      <h3>内閣総理大臣</h3>
+      <span class="badge" style="background-color:#001f3f;"><i class="fas fa-crown"></i> 総理大臣</span>
+    </div>
+
+    <div class="politician-card">
+      <img src="https://via.placeholder.com/250x250.png?text=文部科学省" alt="文部科学省">
+      <h3>文部科学省</h3>
+      <span class="badge" style="background-color:#0074D9;"><i class="fas fa-book"></i> 教育・文化</span>
+    </div>
+
+    <div class="politician-card">
+      <img src="https://via.placeholder.com/250x250.png?text=財務省" alt="財務省">
+      <h3>財務省</h3>
+      <span class="badge" style="background-color:#FF4136;"><i class="fas fa-coins"></i> 財政管理</span>
+    </div>
+
+    <div class="politician-card">
+      <img src="https://via.placeholder.com/250x250.png?text=国土交通省" alt="国土交通省">
+      <h3>国土交通省</h3>
+      <span class="badge" style="background-color:#2ECC40;"><i class="fas fa-road"></i> インフラ</span>
+    </div>
+
+    <div class="politician-card">
+      <img src="https://via.placeholder.com/250x250.png?text=防衛省" alt="防衛省">
+      <h3>防衛省</h3>
+      <span class="badge" style="background-color:#85144b;"><i class="fas fa-shield-alt"></i> 防衛</span>
+    </div>
+
+    <div class="politician-card">
+      <img src="https://via.placeholder.com/250x250.png?text=経済産業省" alt="経済産業省">
+      <h3>経済産業省</h3>
+      <span class="badge" style="background-color:#FF851B;"><i class="fas fa-industry"></i> 産業・経済</span>
+    </div>
+
+    <div class="politician-card">
+      <img src="https://via.placeholder.com/250x250.png?text=宮内庁" alt="宮内庁">
+      <h3>宮内庁</h3>
+      <span class="badge" style="background-color:#B10DC9;"><i class="fas fa-university"></i> 皇室</span>
+    </div>
+
+    <div class="politician-card">
+      <img src="https://via.placeholder.com/250x250.png?text=気象庁" alt="気象庁">
+      <h3>気象庁</h3>
+      <span class="badge" style="background-color:#7FDBFF;"><i class="fas fa-cloud-sun-rain"></i> 天気</span>
+    </div>
+
+    <div class="politician-card">
+      <img src="https://via.placeholder.com/250x250.png?text=サイバー庁" alt="サイバー庁">
+      <h3>サイバー庁</h3>
+      <span class="badge" style="background-color:#111111;"><i class="fas fa-microchip"></i> IT・セキュリティ</span>
+    </div>
+
+    <div class="politician-card">
+      <img src="https://via.placeholder.com/250x250.png?text=スポーツ庁" alt="スポーツ庁">
+      <h3>スポーツ庁</h3>
+      <span class="badge" style="background-color:#FFDC00;"><i class="fas fa-running"></i> スポーツ振興</span>
+    </div>
+
+    <div class="politician-card">
+      <img src="https://via.placeholder.com/250x250.png?text=鉄道庁" alt="鉄道庁">
+      <h3>鉄道庁</h3>
+      <span class="badge" style="background-color:#AAAAAA;"><i class="fas fa-train"></i> 交通機関</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- カードデザインCSS -->
+<style>
+  .politician-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    width: 260px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .politician-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
+  }
+
+  .politician-card img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%; /* 丸く表示 */
+  margin-bottom: 1rem;
+  border: 4px solid #ddd; /* 任意：縁取り */
+}
+
+
+  .politician-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.3rem;
+    color: #333;
+  }
+
+  .badge {
+    display: inline-block;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 9999px;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+
+  .badge i {
+    margin-right: 6px;
+  }
+</style>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleButton = document.getElementById("menu-toggle");
+      const navMenu = document.getElementById("nav-menu");
+
+      toggleButton.addEventListener("click", () => {
+        navMenu.classList.toggle("open");
+      });
+    });
+  </script>
