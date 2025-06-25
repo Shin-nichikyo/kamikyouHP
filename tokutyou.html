@@ -1,0 +1,146 @@
+  <!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>神日京国 特徴紹介</title>
+  <link rel="icon" href="favicon.png" type="image/svg+xml">
+  <meta name="description" content="雑談・趣味・ゲームを楽しめるDiscordサーバー『神日京国』の公式ページ。誰でも参加歓迎！安全で活発なコミュニティへようこそ。">
+  <meta property="og:title" content="神日京国 - Discordサーバー" />
+  <meta property="og:description" content="雑談・趣味・ゲームを楽しめるDiscordサーバー『神日京国』の公式ページ。誰でも参加歓迎！安全で活発なコミュニティへようこそ。" />
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1385647827224625325/1386477074415616121/39_20250623074355.png" />
+  <meta property="og:url" content="https://あなたのサイトURL" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="神日京国 - Discordサーバー">
+  <meta name="twitter:description" content="雑談・趣味・ゲームを楽しめるDiscordサーバー『神日京国』の公式ページ。誰でも参加歓迎！安全で活発なコミュニティへようこそ。">
+  <meta name="twitter:image" content="https://cdn.discordapp.com/attachments/1385647827224625325/1386477074415616121/39_20250623074355.png">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans JP', sans-serif;
+      scroll-behavior: smooth;
+      background-color: #f8f9fa;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #001f3f;
+      color: white;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo-test {
+      color: white; /* テキスト色を白に設定 */
+      text-decoration: none; /* アンダーラインを消す */
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links a i {
+      margin-right: 6px;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .desktop-menu {
+        display: none;
+        width: 100%;
+        background-color: #001f3f;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        flex-direction: column;
+      }
+
+      .desktop-menu.open {
+        display: flex;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+      }
+
+      .nav-links a {
+        padding: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <i class="fas fa-mountain-sun"></i> <a href="/" class="logo-test">神日京国</a>
+    </div>
+
+    <!-- スマホ用ハンバーガーボタン -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- ナビゲーションメニュー -->
+    <nav class="desktop-menu" id="nav-menu">
+       <ul class="nav-links">
+         <li><a href="/"><i class="fas fa-home"></i> ホーム</a></li>
+        <li><a href="kuni"><i class="fas fa-flag"></i> 国紹介</a></li>
+        <li><a href="seizika"><i class="fas fa-landmark"></i> 政治家</a></li>
+        <li><a href="kankou"><i class="fas fa-map-marked-alt"></i> 観光</a></li>
+        <li><a href="syoukai"><i class="fas fa-info-circle"></i> 紹介</a></li>
+        <li><a href="https://discord.com/invite/haP3jjVWku"><i class="fab fa-discord"></i> 参加</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleButton = document.getElementById("menu-toggle");
+      const navMenu = document.getElementById("nav-menu");
+
+      toggleButton.addEventListener("click", () => {
+        navMenu.classList.toggle("open");
+      });
+    });
+  </script>
