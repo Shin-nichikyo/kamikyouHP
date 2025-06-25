@@ -111,41 +111,31 @@ header {
   }
 }
 
-/* ここから修正 */
-.top-image {
-  height: 100vh; /* ビューポートの高さ全体に広げる */
-  display: flex; /* Flexboxで子要素を中央に配置 */
-  justify-content: center; /* 水平方向の中央揃え */
-  align-items: center; /* 垂直方向の中央揃え */
-  position: relative; /* imgのabsolute配置の基準 */
-  overflow: hidden; /* 画像がはみ出さないように隠す */
+/* top-imageとtop-image imgのCSS修正 */
+    .top-image {
+      height: 100vh; /* ビューポートの高さ全体に広げる */
+      display: flex; /* Flexboxで子要素を中央に配置 */
+      justify-content: center; /* 水平方向の中央揃え */
+      align-items: center; /* 垂直方向の中央揃え */
+      position: relative; /* imgのabsolute配置の基準 */
+      overflow: hidden; /* 画像がはみ出さないように隠す */
 
-  /* 背景画像の設定 - ここに別のぼかし用画像のパスを指定 */
-  background-image: url('path/to/your/blurred_background_image.webp'); /* ★ここを別の画像パスに！★ */
-  background-size: cover; /* コンテナ全体を覆うように拡大縮小 */
-  background-position: center; /* 中央に配置 */
-  filter: blur(8px); /* 背景をぼかす（値は調整してください） */
-  -webkit-filter: blur(8px); /* Safari対応 */
-}
+      /* 背景画像の設定 - ここに別のぼかし用画像のパスを指定 */
+      background-image: url('/img/背景.webp'); /* ★ここを別の画像パスに！★ */
+      background-size: cover; /* コンテナ全体を覆うように拡大縮小 */
+      background-position: center; /* 中央に配置 */
+      filter: blur(8px); /* 背景をぼかす（値は調整してください） */
+      -webkit-filter: blur(8px); /* Safari対応 */
+    }
 
-.top-image img {
-  width: auto; /* 元の幅を維持 */
-  height: 100vh; /* ビューポートの高さに合わせる */
-  display: block;
-  object-fit: contain; /* アスペクト比を維持しつつ、コンテナ内に収める */
-  transform: scale(1.05); /* 初期アニメーション用 */
-  opacity: 0;
-  transition: opacity 1s ease, transform 1.5s ease;
-  z-index: 1; /* 背景よりも手前に表示 */
-
-  /* 真ん中の画像はぼかさないので、filterは適用しない */
-}
-
-body.loaded .top-image img {
-  opacity: 1;
-  transform: scale(1); /* 初期アニメーション用 */
-}
-/* ここまで修正 */
+    .top-image img {
+      width: auto; /* 元の幅を維持 */
+      height: 100vh; /* ビューポートの高さに合わせる */
+      display: block;
+      object-fit: contain; /* アスペクト比を維持しつつ、コンテナ内に収める */
+      /* 初期アニメーション関連のプロパティを削除 */
+      z-index: 1; /* 背景よりも手前に表示 */
+    }
 
     body.loaded .top-image img {
       opacity: 1;
