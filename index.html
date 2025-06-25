@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
@@ -111,36 +111,44 @@ header {
   }
 }
 
-/* top-imageとtop-image imgのCSS修正 */
-    .top-image {
-      height: 100vh; /* ビューポートの高さ全体に広げる */
-      display: flex; /* Flexboxで子要素を中央に配置 */
-      justify-content: center; /* 水平方向の中央揃え */
-      align-items: center; /* 垂直方向の中央揃え */
-      position: relative; /* imgのabsolute配置の基準 */
-      overflow: hidden; /* 画像がはみ出さないように隠す */
-    }
+/* ここから主要なCSSの修正 */
+.top-image {
+  height: 100vh; /* ビューポートの高さ全体に広げる */
+  display: flex; /* Flexboxで子要素（.main-content-wrapper）を中央に配置 */
+  justify-content: center; /* 水平方向の中央揃え */
+  align-items: center; /* 垂直方向の中央揃え */
+  position: relative;
+  overflow: hidden;
+}
 
-    .top-image img1 {
-      width: auto; /* 元の幅を維持 */
-      height: 100vh; /* ビューポートの高さに合わせる */
-      display: block;
-      object-fit: contain; /* アスペクト比を維持しつつ、コンテナ内に収める */
-      /* 初期アニメーション関連のプロパティを削除 */
-      z-index: 1; /* 背景よりも手前に表示 */
-    }
+.top-image2 {
+  /* 画面全体の背景画像（宇宙の画像）を設定し、ぼかす */
+  background-image: url('背景.webp'); /* ★ここに宇宙の画像のパスを指定してください！★ */
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px); /* 背景全体をぼかす */
+  -webkit-filter: blur(8px);
+  z-index: 1;
+}
 
-    .top-image img2 {
-      background-size: cover; /* コンテナ全体を覆うように拡大縮小 */
-      background-position: center; /* 中央に配置 */
-      filter: blur(8px); /* 背景をぼかす（値は調整してください） */
-      -webkit-filter: blur(8px); /* Safari対応 */
-    }
-
-    body.loaded .top-image img {
-      opacity: 1;
-      transform: scale(1);
-    }
+/* 鮮明なコンテンツ部分のラッパー */
+.top-image1 {
+  position: absolute; /* .top-imageに対して絶対配置 */
+  z-index: 2; /* ぼかした背景の上に表示 */
+  
+  /* 中央のコンテンツ部分に画像を背景として設定（鮮明な状態） */
+  background-image: url('/39_20250622223803.webp'); /* ★ここにロゴとテキストが入った鮮明な画像のパス！★ */
+  background-size: contain; /* 画像が収まるように */
+  background-repeat: no-repeat;
+  background-position: center left; /* 左にロゴ、右にテキストを想定し、左中央に配置 */
+  
+  width: auto; /* 適宜調整、画像の幅とテキストのスペースを考慮 */
+  height: 100vh; /* 適宜調整、画像の高さ */
+  
+  display: flex; /* ロゴとテキストをFlexboxで配置するため */
+  align-items: center; /* 垂直中央揃え */
+  /* filter: none;  親要素のぼかしは継承されないので不要だが、念のため */
+}
 
     .hero-text {
       padding: 60px 20px;
@@ -294,12 +302,10 @@ header {
     <i class="fas fa-mountain-sun"></i> <a href="/" class="logo-test">神日京国</a>
   </div>
 
-  <!-- ハンバーガーメニュー（スマホ表示） -->
   <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
     <i class="fas fa-bars"></i>
   </button>
 
-  <!-- ナビゲーションメニュー -->
   <nav class="desktop-menu" id="nav-menu">
     <ul class="nav-links">
       <li><a href="kuni"><i class="fas fa-flag"></i> 国紹介</a></li>
@@ -314,8 +320,8 @@ header {
 
 
   <div class="top-image">
-    <img class="img1" src="/39_20250622223803.webp" alt="神日京国のイメージ" id="parallax">
-    <img class="img2" src="/img/haikei1.webp" alt="神日京国の背景イメージ" id="parallax">
+      <img src="39_20250622223803.webp" class="top-image1">
+      <img src="top-背景.webp" class="top-image2" >
   </div>
 
   <section class="hero-text">
@@ -363,9 +369,7 @@ header {
   </footer>
 
   <script>
-    window.addEventListener("load", () => {
-      document.body.classList.add("loaded");
-    });
+    // 初期アニメーション関連のJSは削除済みです
 
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
