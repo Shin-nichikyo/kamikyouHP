@@ -345,12 +345,6 @@ header {
       document.body.classList.add("loaded");
     });
 
-    window.addEventListener("scroll", () => {
-      const img = document.getElementById("parallax");
-      const offset = window.scrollY * 0.1;
-      img.style.transform = `translateY(${offset}px)`;
-    });
-
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
