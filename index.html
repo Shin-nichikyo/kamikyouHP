@@ -111,24 +111,32 @@ header {
   }
 }
 
-      .top-image {
-        /* 新しく追加 */
-        display: flex; /* Flexboxを有効にする */
-        justify-content: center; /* 水平方向の中央揃え */
-        align-items: center; /* 垂直方向の中央揃え */
-        height: 100vh; /* 親要素の高さも設定 */
-        overflow: hidden; /* 画像がはみ出さないように */
-      }
-
+     /* ここから修正・追加 */
+    .top-image {
+      /* 背景画像としてぼかした画像を配置 */
+      background-image: url('/39_20250622223803.webp'); /* ぼかしたい画像のパスを指定 */
+      background-size: cover; /* 背景画像をコンテナ全体に拡大縮小して表示 */
+      background-position: center; /* 背景画像を中央に配置 */
+      filter: blur(8px); /* 背景画像をぼかす（値は調整してください） */
+      -webkit-filter: blur(8px); /* Safari対応 */
+      height: 100vh; /* ビューポートの高さ全体に広げる */
+      position: relative; /* 子要素の配置基準にする */
+      overflow: hidden; /* はみ出した部分を隠す */
+    }
 
     .top-image img {
-      width: auto;
-      height: 100vh;
+      /* 中央に配置する鮮明な画像 */
+      width: auto; /* 元の幅を維持 */
+      height: 100vh; /* ビューポートの高さに合わせる */
       display: block;
-      object-fit: contain;
-      transform: scale(1.05);
+      object-fit: contain; /* アスペクト比を維持しつつ、コンテナ内に収める */
+      position: absolute; /* 親要素に対して絶対配置 */
+      top: 50%; /* 垂直方向の中央 */
+      left: 50%; /* 水平方向の中央 */
+      transform: translate(-50%, -50%) scale(1.05); /* 中央に移動し、わずかに拡大 */
       opacity: 0;
       transition: opacity 1s ease, transform 1.5s ease;
+      z-index: 1; /* 背景より手前に表示 */
     }
 
     body.loaded .top-image img {
