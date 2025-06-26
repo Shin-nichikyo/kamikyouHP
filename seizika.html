@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>神日京国 政治家紹介</title>
+  <title>神日京国 国紹介</title>
   <link rel="icon" href="favicon.png" type="image/svg+xml">
   <meta name="description" content="雑談・趣味・ゲームを楽しめるDiscordサーバー『神日京国』の公式ページ。誰でも参加歓迎！安全で活発なコミュニティへようこそ。">
   <meta property="og:title" content="神日京国 - Discordサーバー" />
@@ -45,9 +45,9 @@
       gap: 0.5rem;
     }
 
-    .logo-text {
-      color: white; /* テキスト色を白に設定 */
-      text-decoration: none; /* アンダーラインを消す */
+    .logo-test {
+      color: white;
+      text-decoration: none;
     }
 
     .nav-links {
@@ -107,13 +107,71 @@
         padding: 0.5rem;
       }
     }
+
+
+    /* 政治家紹介セクション */
+    #seizika {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    #seizika h2 {
+      text-align: center;
+      color: #001f3f;
+      margin-bottom: 2rem;
+      font-weight: 700;
+      font-size: 2rem;
+    }
+
+    .politician-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: default;
+    }
+
+    .politician-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .politician-card img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 2px solid #001f3f;
+    }
+
+    .politician-card h3 {
+      margin: 0 0 0.5rem 0;
+      color: #001f3f;
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+
+    .politician-card p {
+      margin: 0 0 0.3rem 0;
+      color: #333;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
   </style>
 </head>
 <body>
 
   <header>
     <div class="logo">
-      <i class="fas fa-mountain-sun"></i> <a href="/" class="logo-text">神日京国</a>
+      <i class="fas fa-mountain-sun"></i> <a href="/" class="logo-test">神日京国</a>
     </div>
 
     <!-- スマホ用ハンバーガーボタン -->
@@ -123,9 +181,9 @@
 
     <!-- ナビゲーションメニュー -->
     <nav class="desktop-menu" id="nav-menu">
-       <ul class="nav-links">
-         <li><a href="/"><i class="fas fa-home"></i> ホーム</a></li>
-        <li><a href="kuni"><i class="fas fa-flag"></i> 国紹介</a></li>
+      <ul class="nav-links">
+        <li><a href="/"><i class="fas fa-home"></i> ホーム</a></li>
+        <li><a href="#seizika"><i class="fas fa-landmark"></i> 政治家</a></li>
         <li><a href="kankou"><i class="fas fa-map-marked-alt"></i> 観光</a></li>
         <li><a href="syoukai"><i class="fas fa-info-circle"></i> 紹介</a></li>
         <li><a href="tokutyou"><i class="fas fa-star"></i> 特徴</a></li>
@@ -133,352 +191,389 @@
       </ul>
     </nav>
   </header>
-  <section id="politicians" style="padding: 3rem 1rem; background-color: #fff;">
-  <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 3rem; color: #001f3f;">政治家紹介</h2>
 
-  <section class="accordion-container">
+<!-- 大臣紹介セクション -->
+<section id="daijin" style="padding:2rem; max-width:900px; margin:auto;">
+  <h2 style="text-align:center; color:#001f3f; margin-bottom:2rem; font-weight:700; font-size:2rem;">
+    <i class="fas fa-users" style="margin-right:0.5rem; color:#001f3f;"></i>大臣紹介
+  </h2>
 
-  <!-- ▼ 内閣総理大臣 -->
-  <div class="accordion-group">
-    <button class="accordion-toggle"><i class="fas fa-crown"></i> 内閣総理大臣</button>
-    <div class="accordion-content">
-      <div class="politician-card">
-        <img src="img/yuyuto.webp" alt="内閣総理大臣">
-        <h3>ゆゆと</h3>
-        <span class="badge" style="background-color:#001f3f;"><i class="fas fa-crown"></i> 内閣総理大臣</span>
+  <!-- 内閣総理大臣 真ん中配置・少し小さく -->
+<div class="minister-group" style="margin-bottom: 3rem; display:flex; justify-content:center;">
+  <div style="
+    flex: 0 0 260px;
+    max-width: 260px;
+    text-align: center;
+    background-color: #cce4f7;
+    border: 3px solid #0074D9;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 6px 15px rgba(0, 116, 217, 0.35);
+    transition: transform 0.3s ease;
+  " 
+  onmouseover="this.style.transform='scale(1.05)'" 
+  onmouseout="this.style.transform='scale(1)'"
+  >
+    <h3 style="color:#001f3f; margin-bottom:1.2rem; font-size:1.5rem; font-weight:800;">
+      <i class="fas fa-user-tie" style="margin-right:0.5rem; color:#001f3f;"></i>内閣総理大臣
+    </h3>
+    <img src="img/yuyuto.webp" alt="ゆゆと" style="border-radius:50%; width:100px; height:100px; object-fit: cover; border: 3px solid #0074D9;" />
+    <h3 style="margin-top:0.8rem; font-size:1.2rem; font-weight:700; color:#001f3f;">　　　　　ゆゆと</h3>
+  </div>
+</div>
+
+  <!-- 防衛大臣 -->
+  <div class="minister-group" style="margin-bottom: 2rem;">
+    <h3 style="color:#001f3f; margin-bottom:1rem;">
+      <i class="fas fa-shield-alt" style="margin-right:0.5rem; color:#001f3f;"></i>防衛大臣
+    </h3>
+    <div style="display:flex; gap:1rem; flex-wrap: wrap;">
+      <div class="politician-card" style="flex:1 1 250px;">
+        <img src="img/ノヴァ.webp" alt="紅蓮ノヴァ" style="border-radius:8px;" />
+        <div>
+          <h3>紅蓮ノヴァ</h3>
+        </div>
+      </div>
+      <div class="politician-card" style="flex:1 1 250px;">
+        <div>
+          <h3></h3>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- ▼ 文部科学省 -->
-  <div class="accordion-group">
-    <button class="accordion-toggle"><i class="fas fa-book"></i> 文部科学省</button>
-    <div class="accordion-content">
-      <div class="politician-card">
-        <img src="img/ruba.webp" alt="文部科学省">
-        <h3>ルヴァ@おまねこ推し</h3>
-        <span class="badge" style="background-color:#0074D9;"><i class="fas fa-book"></i> 文部科学大臣</span>
+  <!-- 国土交通省 -->
+  <div class="minister-group" style="margin-bottom: 2rem;">
+    <h3 style="color:#001f3f; margin-bottom:1rem;">
+      <i class="fas fa-road" style="margin-right:0.5rem; color:#001f3f;"></i>国土交通省
+    </h3>
+    <div style="display:flex; gap:1rem; flex-wrap: wrap;">
+      <div class="politician-card" style="flex:1 1 250px;">
+        <img src="img/KJ.webp" alt="国土交通省担当者1" style="border-radius:8px;" />
+        <div>
+          <h3>KJ_87</h3>
+        </div>
       </div>
-      <div class="politician-card">
-        <img src="img/toto.png" alt="空席">
-        <h3>トト</h3>
-        <span class="badge" style="background-color:#0074D9;"><i class="fas fa-book"></i> 文部科学大臣</span>
-      </div>
-      <div class="politician-card">
-        <img src="https://via.placeholder.com/250x250.png?text=未定義" alt="空席">
-        <h3>未定義</h3>
-        <span class="badge" style="background-color:#0074D9;"><i class="fas fa-book"></i> 空席</span>
+      <div class="politician-card" style="flex:1 1 250px;">
+        <div>
+          <h3></h3>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- ▼ 財務省 -->
-  <div class="accordion-group">
-    <button class="accordion-toggle"><i class="fas fa-coins"></i> 財務省</button>
-    <div class="accordion-content">
-      <div class="politician-card">
-        <img src="img/wani.webp" alt="財務省">
-        <h3>常磐 優希「ウニ」</h3>
-        <span class="badge" style="background-color:#FF4136;"><i class="fas fa-coins"></i> 財務大臣</span>
+  <!-- 鉄道庁 -->
+  <div class="minister-group" style="margin-bottom: 2rem;">
+    <h3 style="color:#001f3f; margin-bottom:1rem;">
+      <i class="fas fa-train" style="margin-right:0.5rem; color:#001f3f;"></i>鉄道庁
+    </h3>
+    <div style="display:flex; gap:1rem; flex-wrap: wrap;">
+      <div class="politician-card" style="flex:1 1 250px;">
+        <img src="img/finneko0.webp" alt="鉄道庁担当者1" style="border-radius:8px;" />
+        <div>
+          <h3>フィンネッコ</h3>
+        </div>
       </div>
-      <div class="politician-card">
-        <img src="https://via.placeholder.com/250x250.png?text=未定義" alt="空席">
-        <h3>くれは</h3>
-        <span class="badge" style="background-color:#FF4136;"><i class="fas fa-coins"></i> 財務大臣</span>
-      </div>
-      <div class="politician-card">
-        <img src="https://via.placeholder.com/250x250.png?text=未定義" alt="空席">
-        <h3>未定義</h3>
-        <span class="badge" style="background-color:#FF4136;"><i class="fas fa-coins"></i> 空席</span>
+      <div class="politician-card" style="flex:1 1 250px;">
+        <div>
+          <h3></h3>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- ▼ 以下同様、国土交通省、防衛省、経済産業省、宮内庁、気象庁、サイバー庁、スポーツ庁、鉄道庁、政治局委員会 -->
-  <!-- 例：国土交通省 -->
-  <div class="accordion-group">
-    <button class="accordion-toggle"><i class="fas fa-road"></i> 国土交通省</button>
-    <div class="accordion-content">
-      <div class="politician-card">
-        <img src="https://via.placeholder.com/250x250.png?text=国土交通省" alt="国土交通省">
-        <h3>KJ_87</h3>
-        <span class="badge" style="background-color:#2ECC40;"><i class="fas fa-road"></i> 国土交通大臣</span>
+  <!-- スポーツ庁 -->
+  <div class="minister-group" style="margin-bottom: 2rem;">
+    <h3 style="color:#001f3f; margin-bottom:1rem;">
+      <i class="fas fa-football-ball" style="margin-right:0.5rem; color:#001f3f;"></i>スポーツ庁
+    </h3>
+    <div style="display:flex; gap:1rem; flex-wrap: wrap;">
+      <div class="politician-card" style="flex:1 1 250px;">
+        <img src="img/kazumoni.webp" alt="スポーツ庁担当者1" style="border-radius:8px;" />
+        <div>
+          <h3>かずもに</h3>
+        </div>
       </div>
-      <div class="politician-card">
-        <img src="https://via.placeholder.com/250x250.png?text=未定義" alt="空席">
-        <h3>未定義</h3>
-        <span class="badge" style="background-color:#2ECC40;"><i class="fas fa-road"></i> 空席</span>
-      </div>
-      <div class="politician-card">
-        <img src="https://via.placeholder.com/250x250.png?text=未定義" alt="空席">
-        <h3>未定義</h3>
-        <span class="badge" style="background-color:#2ECC40;"><i class="fas fa-road"></i> 空席</span>
+      <div class="politician-card" style="flex:1 1 250px;">
+        <div>
+          <h3></h3>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="accordion-group">
-    <button class="accordion-toggle"><i class="fa-solid fa-shield-halved"></i> 防衛省</button>
-    <div class="accordion-content">
-      <div class="politician-card">
-        <img src="img/ノヴァ.webp" alt="紅蓮ノヴァ">
-        <h3>紅蓮ノヴァ</h3>
-        <span class="badge" style="background-color:#2ECC40;"><i class="fa-solid fa-shield-halved"></i> 防衛大臣</span>
+  <!-- サイバー庁 -->
+  <div class="minister-group" style="margin-bottom: 2rem;">
+    <h3 style="color:#001f3f; margin-bottom:1rem;">
+      <i class="fas fa-passport" style="margin-right:0.5rem; color:#001f3f;"></i>サイバー庁
+    </h3>
+    <div style="display:flex; gap:1rem; flex-wrap: wrap;">
+      <div class="politician-card" style="flex:1 1 250px;">
+        <img src="img/marisa.webp" alt="サイバー庁担当者1" style="border-radius:8px;" />
+        <div>
+          <h3>marisa</h3>
+        </div>
       </div>
-      <div class="politician-card">
-        <img src="img/shun-game.webp" alt="shun_game11">
-        <h3>shun_game11</h3>
-        <span class="badge" style="background-color:#2ECC40;"><i class="fa-solid fa-shield-halved"></i> 軍事参謀大臣</span>
-      </div>
-      <div class="politician-card">
-        <img src="https://via.placeholder.com/250x250.png?text=未定義" alt="空席">
-        <h3>未定義</h3>
-        <span class="badge" style="background-color:#2ECC40;"><i class="fa-solid fa-shield-halved"></i> 空席</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="accordion-group">
-    <button class="accordion-toggle"><i class="fas fa-industry"></i> 経済産業省</button>
-    <div class="accordion-content">
-      <div class="politician-card">
-        <img src="https://via.placeholder.com/250x250.png?text=国土交通省" alt="経済産業省">
-        <h3>nekoLnuβ</h3>
-        <span class="badge" style="background-color:#2ECC40;"><i class="fas fa-industry"></i> 経済産業大臣</span>
-      </div>
-      <div class="politician-card">
-        <img src="https://via.placeholder.com/250x250.png?text=未定義" alt="空席">
-        <h3>zainin</h3>
-        <span class="badge" style="background-color:#2ECC40;"><i class="fas fa-industry"></i> 経済産業大臣</span>
-      </div>
-      <div class="politician-card">
-        <img src="https://via.placeholder.com/250x250.png?text=未定義" alt="空席">
-        <h3>未定義</h3>
-        <span class="badge" style="background-color:#2ECC40;"><i class="fas fa-industry"></i> 空席</span>
+      <div class="politician-card" style="flex:1 1 250px;">
+        <div>
+          <h3></h3>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="accordion-group">
-    <button class="accordion-toggle"><i class="fas fa-person-running"></i> スポーツ庁</button>
-    <div class="accordion-content">
-      <div class="politician-card">
-        <img src="https://via.placeholder.com/250x250.png?text=国土交通省" alt="スポーツ庁">
-        <h3>かずもに</h3>
-        <span class="badge" style="background-color:#2ECC40;"><i class="fas fa-person-running"></i> スポーツ大臣</span>
+  <!-- 宮内省 -->
+  <div class="minister-group" style="margin-bottom: 2rem;">
+    <h3 style="color:#001f3f; margin-bottom:1rem;">
+      <i class="fas fa-crown" style="margin-right:0.5rem; color:#001f3f;"></i>天皇（宮内省）
+    </h3>
+    <div style="display:flex; gap:1rem; flex-wrap: wrap;">
+      <div class="politician-card" style="flex:1 1 250px;">
+        <img src="img/葵.webp" alt="宮内省担当者1" style="border-radius:8px;" />
+        <div>
+          <h3>葵</h3>
+        </div>
       </div>
-      <div class="politician-card">
-        <img src="https://via.placeholder.com/250x250.png?text=未定義" alt="空席">
-        <h3>未定義</h3>
-        <span class="badge" style="background-color:#2ECC40;"><i class="fas fa-person-running"></i> 空席</span>
-      </div>
-      <div class="politician-card">
-        <img src="https://via.placeholder.com/250x250.png?text=未定義" alt="空席">
-        <h3>未定義</h3>
-        <span class="badge" style="background-color:#2ECC40;"><i class="fas fa-person-running"></i> 空席</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="accordion-group">
-    <button class="accordion-toggle"><i class="fas fa-network-wired"></i> サイバー庁</button>
-    <div class="accordion-content">
-      <div class="politician-card">
-        <img src="img/marisa.webp" alt="サイバー庁">
-        <h3>marisa</h3>
-        <span class="badge" style="background-color:#2ECC40;"><i class="fas fa-network-wired"></i> サイバー大臣</span>
-      </div>
-      <div class="politician-card">
-        <img src="img/ノヴァ.webp" alt="空席">
-        <h3>紅蓮ノヴァ</h3>
-        <span class="badge" style="background-color:#2ECC40;"><i class="fas fa-network-wired"></i> サイバー大臣</span>
-      </div>
-      <div class="politician-card">
-        <img src="https://via.placeholder.com/250x250.png?text=未定義" alt="空席">
-        <h3>未定義</h3>
-        <span class="badge" style="background-color:#2ECC40;"><i class="fas fa-network-wired"></i> 空席</span>
+      <div class="politician-card" style="flex:1 1 250px;">
+        <img src="img/kyOm.webp" alt="宮内省担当者1" style="border-radius:8px;" />
+        <div>
+          <h3>ky0m</h3>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="accordion-group">
-    <button class="accordion-toggle"><i class="fas fa-crown"></i> 宮内庁</button>
-    <div class="accordion-content">
-      <div class="politician-card">
-        <img src="https://via.placeholder.com/250x250.png?text=国土交通省" alt="宮内庁">
-        <h3>国土交通省</h3>
-        <span class="badge" style="background-color:#2ECC40;"><i class="fas fa-crown"></i> 国土交通省</span>
+  <!-- 経済産業省 -->
+  <div class="minister-group" style="margin-bottom: 2rem;">
+    <h3 style="color:#001f3f; margin-bottom:1rem;">
+      <i class="fas fa-chart-line" style="margin-right:0.5rem; color:#001f3f;"></i>経済産業省
+    </h3>
+    <div style="display:flex; gap:1rem; flex-wrap: wrap;">
+      <div class="politician-card" style="flex:1 1 250px;">
+        <img src="img/nekolnu.webp" alt="経済産業省担当者1" style="border-radius:8px;" />
+        <div>
+          <h3>nekoLnuβ</h3>
+        </div>
       </div>
-      <div class="politician-card">
-        <img src="https://via.placeholder.com/250x250.png?text=未定義" alt="空席">
-        <h3>未定義</h3>
-        <span class="badge" style="background-color:#2ECC40;"><i class="fas fa-crown"></i> 空席</span>
+      <div class="politician-card" style="flex:1 1 250px;">
+        <img src="img/らいむ.webp" alt="経済産業省担当者1" style="border-radius:8px;" />
+        <div>
+          <h3>ライム</h3>
+        </div>
       </div>
-      <div class="politician-card">
-        <img src="https://via.placeholder.com/250x250.png?text=未定義" alt="空席">
-        <h3>未定義</h3>
-        <span class="badge" style="background-color:#2ECC40;"><i class="fas fa-crown"></i> 空席</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="accordion-group">
-    <button class="accordion-toggle"><i class="fas fa-cloud-sun-rain"></i> 気象庁</button>
-    <div class="accordion-content">
-      <div class="politician-card">
-        <img src="https://via.placeholder.com/250x250.png?text=国土交通省" alt="国土交通省">
-        <h3>国土交通省</h3>
-        <span class="badge" style="background-color:#2ECC40;"><i class="fas fa-cloud-sun-rain"></i> 気象庁長官</span>
-      </div>
-      <div class="politician-card">
-        <img src="https://via.placeholder.com/250x250.png?text=未定義" alt="空席">
-        <h3>未定義</h3>
-        <span class="badge" style="background-color:#2ECC40;"><i class="fas fa-cloud-sun-rain"></i> 空席</span>
-      </div>
-      <div class="politician-card">
-        <img src="https://via.placeholder.com/250x250.png?text=未定義" alt="空席">
-        <h3>未定義</h3>
-        <span class="badge" style="background-color:#2ECC40;"><i class="fas fa-cloud-sun-rain"></i> 空席</span>
+      <div class="politician-card" style="flex:1 1 250px;">
+        <img src="img/zainin.webp" alt="経済産業省担当者1" style="border-radius:8px;" />
+        <div>
+          <h3>zainin</h3>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="accordion-group">
-    <button class="accordion-toggle"><i class="fas fa-train"></i> 鉄道庁</button>
-    <div class="accordion-content">
-      <div class="politician-card">
-        <img src="img/finneko0.webp" alt="鉄道庁">
-        <h3>フィンネッコ</h3>
-        <span class="badge" style="background-color:#2ECC40;"><i class="fas fa-train"></i> 鉄道長官</span>
+  <!-- 財務省 -->
+  <div class="minister-group" style="margin-bottom: 2rem;">
+    <h3 style="color:#001f3f; margin-bottom:1rem;">
+      <i class="fas fa-wallet" style="margin-right:0.5rem; color:#001f3f;"></i>財務省
+    </h3>
+    <div style="display:flex; gap:1rem; flex-wrap: wrap;">
+      <div class="politician-card" style="flex:1 1 250px;">
+        <img src="img/wani.webp" alt="財務省担当者1" style="border-radius:8px;" />
+        <div>
+          <h3>常磐　優希「ウニ」</h3>
+        </div>
       </div>
-      <div class="politician-card">
-        <img src="https://via.placeholder.com/250x250.png?text=未定義" alt="空席">
-        <h3>未定義</h3>
-        <span class="badge" style="background-color:#2ECC40;"><i class="fas fa-train"></i> 空席</span>
-      </div>
-      <div class="politician-card">
-        <img src="https://via.placeholder.com/250x250.png?text=未定義" alt="空席">
-        <h3>未定義</h3>
-        <span class="badge" style="background-color:#2ECC40;"><i class="fas fa-train"></i> 空席</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="accordion-group">
-    <button class="accordion-toggle"><i class="fas fa-users-cog"></i> 政治局委員会</button>
-    <div class="accordion-content">
-      <div class="politician-card">
-        <img src="img/images.webp" alt="政治局委員会">
-        <h3>れじすん</h3>
-        <span class="badge" style="background-color:#2ECC40;"><i class="fas fa-users-cog"></i> 政治局委員会</span>
-      </div>
-      <div class="politician-card">
-        <img src="img/chcha03.webp" alt="空席">
-        <h3>ちゃちゃ丸</h3>
-        <span class="badge" style="background-color:#2ECC40;"><i class="fas fa-users-cog"></i> 政治局委員</span>
-      </div>
-      <div class="politician-card">
-        <img src="https://via.placeholder.com/250x250.png?text=未定義" alt="空席">
-        <h3>未定義</h3>
-        <span class="badge" style="background-color:#2ECC40;"><i class="fas fa-users-cog"></i> 空席</span>
+      <div class="politician-card" style="flex:1 1 250px;">
+        <img src="img/くれは.webp" alt="財務省担当者2" style="border-radius:8px;" />
+        <div>
+          <h3>くれは</h3>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- 他の省庁や庁（防衛省、経産省、宮内庁、気象庁、サイバー庁、スポーツ庁、鉄道庁、政治局委員会）もこのパターンで展開していってください。 -->
-  
+  <!-- 文部科学省 -->
+  <div class="minister-group" style="margin-bottom: 2rem;">
+    <h3 style="color:#001f3f; margin-bottom:1rem;">
+      <i class="fas fa-book" style="margin-right:0.5rem; color:#001f3f;"></i>文部科学省
+    </h3>
+    <div style="display:flex; gap:1rem; flex-wrap: wrap;">
+      <div class="politician-card" style="flex:1 1 250px;">
+        <img src="img/toto.png" alt="文部科学省担当者1" style="border-radius:8px;" />
+        <div>
+          <h3>トト</h3>
+        </div>
+      </div>
+      <div class="politician-card" style="flex:1 1 250px;">
+        <img src="img/ruba.webp" alt="文部科学省担当者1" style="border-radius:8px;" />
+        <div>
+          <h3>ルヴァ@おまねこ推し</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 爆破部隊元帥 -->
+  <div class="minister-group" style="margin-bottom: 2rem;">
+    <h3 style="color:#001f3f; margin-bottom:1rem;">
+      <i class="fas fa-bomb" style="margin-right:0.5rem; color:#001f3f;"></i>爆破部隊元帥
+    </h3>
+    <div style="display:flex; gap:1rem; flex-wrap: wrap;">
+      <div class="politician-card" style="flex:1 1 250px;">
+        <img src="img/月.webp" alt="爆破部隊元帥担当者" style="border-radius:8px;" />
+        <div>
+          <h3>月（ルナ）（ネコ）</h3>
+        </div>
+      </div>
+      <div class="politician-card" style="flex:1 1 250px;">
+        <div>
+          <h3></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 軍事参謀大臣 -->
+  <div class="minister-group" style="margin-bottom: 2rem;">
+    <h3 style="color:#001f3f; margin-bottom:1rem;">
+      <i class="fas fa-fighter-jet" style="margin-right:0.5rem; color:#001f3f;"></i>軍事参謀大臣
+    </h3>
+    <div style="display:flex; gap:1rem; flex-wrap: wrap;">
+      <div class="politician-card" style="flex:1 1 250px;">
+        <img src="img/shun-game.webp" alt="軍事参謀大臣担当者" style="border-radius:8px;" />
+        <div>
+          <h3>shun_game11</h3>
+        </div>
+      </div>
+      <div class="politician-card" style="flex:1 1 250px;">
+        <div>
+          <h3></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 政治局委員会 -->
+  <div class="minister-group" style="margin-bottom: 2rem;">
+    <h3 style="color:#001f3f; margin-bottom:1rem;">
+      <i class="fas fa-landmark" style="margin-right:0.5rem; color:#001f3f;"></i>政治局委員会
+    </h3>
+    <div style="display:flex; gap:1rem; flex-wrap: wrap;">
+      <div class="politician-card" style="flex:1 1 250px;">
+        <img src="img/ちゃちゃ.webp" alt="政治局委員会担当者" style="border-radius:8px;" />
+        <div>
+          <h3>ちゃちゃ丸さん</h3>
+        </div>
+      </div>
+      <div class="politician-card" style="flex:1 1 250px;">
+        <img src="img/images.webp" alt="政治局委員会担当者" style="border-radius:8px;" />
+        <div>
+          <h3>れじすん</h3>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-
-<!-- カードデザインCSS -->
 <style>
-  .accordion-group {
-    margin-bottom: 1.5rem;
-  }
-
-  .accordion-toggle {
-    width: 100%;
-    background-color: #001f3f;
-    color: white;
-    font-size: 1.1rem;
-    font-weight: bold;
-    padding: 0.8rem 1rem;
-    border: none;
-    text-align: left;
-    cursor: pointer;
-    outline: none;
-    border-radius: 6px;
-    transition: background-color 0.2s ease;
-  }
-
-  .accordion-toggle:hover {
-    background-color: #003366;
-  }
-
-  .accordion-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 1rem 0;
+  #daijin {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
 }
-.politician-card {
-  flex: 1 1 calc(33.333% - 1rem);
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 1rem;
+
+h2 {
   text-align: center;
-  background-color: #fff;
-}
-.politician-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-}
-.badge {
-  display: inline-block;
-  padding: 0.3rem 0.6rem;
-  color: #fff;
-  border-radius: 12px;
-  margin-top: 0.5rem;
+  color: #001f3f;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 2rem;
 }
 
+.minister-group {
+  margin-bottom: 2rem;
+}
 
-  .accordion-toggle i {
-    margin-right: 8px;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
-  .politician-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
-  }
-
-  .politician-card img {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 50%; /* 丸く表示 */
+.minister-group h3 {
+  color: #001f3f;
   margin-bottom: 1rem;
-  border: 4px solid #ddd; /* 任意：縁取り */
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.3rem;
 }
 
+.minister-group h3 i {
+  color: #001f3f;
+}
 
-  .politician-card h3 {
-    margin: 0.5rem 0;
-    font-size: 1.3rem;
-    color: #333;
-  }
+.politician-cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
 
-  .badge i {
-    margin-right: 6px;
-  }
+.politician-card {
+  flex: 1 1 250px;
+  background: #f0f8ff;
+  border-radius: 8px;
+  padding: 0.8rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.politician-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 116, 217, 0.25);
+}
+
+.politician-card img {
+  border-radius: 8px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.politician-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #001f3f;
+  font-weight: 600;
+}
+
+/* 内閣総理大臣のみ特別目立たせる */
+.premier-minister {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.premier-minister .politician-card {
+  flex: 0 0 260px;
+  max-width: 260px;
+  background-color: #cce4f7;
+  border: 3px solid #0074D9;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 6px 15px rgba(0, 116, 217, 0.35);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.premier-minister .politician-card img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border: 3px solid #0074D9;
+}
+
+.premier-minister .politician-card h3 {
+  margin-top: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
 </style>
-
-
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -489,16 +584,6 @@
         navMenu.classList.toggle("open");
       });
     });
-
-    document.addEventListener("DOMContentLoaded", function () {
-    const toggles = document.querySelectorAll(".accordion-toggle");
-
-    toggles.forEach(toggle => {
-      toggle.addEventListener("click", () => {
-        const content = toggle.nextElementSibling;
-        content.style.display = content.style.display === "block" ? "none" : "block";
-      });
-    });
-  });
   </script>
-
+</body>
+</html>
