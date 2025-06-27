@@ -192,387 +192,269 @@
     </nav>
   </header>
 
-<!-- 大臣紹介セクション -->
-<section id="daijin" style="padding:2rem; max-width:900px; margin:auto;">
-  <h2 style="text-align:center; color:#001f3f; margin-bottom:2rem; font-weight:700; font-size:2rem;">
-    <i class="fas fa-users" style="margin-right:0.5rem; color:#001f3f;"></i>大臣紹介
-  </h2>
+<section id="daijin">
+  <h1><i class="fas fa-users" style="margin-right:0.5rem; color:#001f3f;"></i>大臣紹介</h1>
 
-  <!-- 内閣総理大臣 真ん中配置・少し小さく -->
-<div class="minister-group" style="margin-bottom: 3rem; display:flex; justify-content:center;">
-  <div style="
-    flex: 0 0 260px;
-    max-width: 260px;
-    text-align: center;
-    background-color: #cce4f7;
-    border: 3px solid #0074D9;
-    border-radius: 12px;
-    padding: 1rem;
-    box-shadow: 0 6px 15px rgba(0, 116, 217, 0.35);
-    transition: transform 0.3s ease;
-  " 
-  onmouseover="this.style.transform='scale(1.05)'" 
-  onmouseout="this.style.transform='scale(1)'"
-  >
-    <h3 style="color:#001f3f; margin-bottom:1.2rem; font-size:1.5rem; font-weight:800;">
-      <i class="fas fa-user-tie" style="margin-right:0.5rem; color:#001f3f;"></i>内閣総理大臣
-    </h3>
-    <img src="img/yuyuto.webp" alt="ゆゆと" style="border-radius:50%; width:100px; height:100px; object-fit: cover; border: 3px solid #0074D9;" />
-    <h3 style="margin-top:0.8rem; font-size:1.2rem; font-weight:700; color:#001f3f;">　　　　　ゆゆと</h3>
-  </div>
-</div>
+  <!-- 内閣総理大臣 -->
+  <section class="role-section">
+    <h2><i class="fas fa-user-tie"></i> 内閣総理大臣</h2>
+    <div class="roles-grid">
+      <div class="role-card premier">
+        <img src="img/yuyuto.webp" alt="ゆゆとさんの写真" />
+        <div class="role-name">ゆゆと</div>
+      </div>
+    </div>
+  </section>
 
   <!-- 防衛大臣 -->
-  <div class="minister-group" style="margin-bottom: 2rem;">
-    <h3 style="color:#001f3f; margin-bottom:1rem;">
-      <i class="fas fa-shield-alt" style="margin-right:0.5rem; color:#001f3f;"></i>防衛大臣
-    </h3>
-    <div style="display:flex; gap:1rem; flex-wrap: wrap;">
-      <div class="politician-card" style="flex:1 1 250px;">
-        <img src="img/ノヴァ.webp" alt="紅蓮ノヴァ" style="border-radius:8px;" />
-        <div>
-          <h3>紅蓮ノヴァ</h3>
-        </div>
-      </div>
-      <div class="politician-card" style="flex:1 1 250px;">
-        <div>
-          <h3></h3>
-        </div>
+  <section class="role-section">
+    <h2><i class="fas fa-shield-alt"></i> 防衛大臣</h2>
+    <div class="roles-grid">
+      <div class="role-card">
+        <img src="img/ノヴァ.webp" alt="紅蓮ノヴァさんの写真" />
+        <div class="role-name">紅蓮ノヴァ</div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- 国土交通省 -->
-  <div class="minister-group" style="margin-bottom: 2rem;">
-    <h3 style="color:#001f3f; margin-bottom:1rem;">
-      <i class="fas fa-road" style="margin-right:0.5rem; color:#001f3f;"></i>国土交通省
-    </h3>
-    <div style="display:flex; gap:1rem; flex-wrap: wrap;">
-      <div class="politician-card" style="flex:1 1 250px;">
-        <img src="img/KJ.webp" alt="国土交通省担当者1" style="border-radius:8px;" />
-        <div>
-          <h3>KJ_87</h3>
-        </div>
-      </div>
-      <div class="politician-card" style="flex:1 1 250px;">
-        <div>
-          <h3></h3>
-        </div>
+  <section class="role-section">
+    <h2><i class="fas fa-road"></i> 国土交通省</h2>
+    <div class="roles-grid">
+      <div class="role-card">
+        <img src="img/KJ.webp" alt="KJ_87さんの写真" />
+        <div class="role-name">KJ_87</div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- 鉄道庁 -->
-  <div class="minister-group" style="margin-bottom: 2rem;">
-    <h3 style="color:#001f3f; margin-bottom:1rem;">
-      <i class="fas fa-train" style="margin-right:0.5rem; color:#001f3f;"></i>鉄道庁
-    </h3>
-    <div style="display:flex; gap:1rem; flex-wrap: wrap;">
-      <div class="politician-card" style="flex:1 1 250px;">
-        <img src="img/finneko0.webp" alt="鉄道庁担当者1" style="border-radius:8px;" />
-        <div>
-          <h3>フィンネッコ</h3>
-        </div>
-      </div>
-      <div class="politician-card" style="flex:1 1 250px;">
-        <div>
-          <h3></h3>
-        </div>
+  <section class="role-section">
+    <h2><i class="fas fa-train"></i> 鉄道庁</h2>
+    <div class="roles-grid">
+      <div class="role-card">
+        <img src="img/finneko0.webp" alt="フィンネッコさんの写真" />
+        <div class="role-name">フィンネッコ</div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- スポーツ庁 -->
-  <div class="minister-group" style="margin-bottom: 2rem;">
-    <h3 style="color:#001f3f; margin-bottom:1rem;">
-      <i class="fas fa-football-ball" style="margin-right:0.5rem; color:#001f3f;"></i>スポーツ庁
-    </h3>
-    <div style="display:flex; gap:1rem; flex-wrap: wrap;">
-      <div class="politician-card" style="flex:1 1 250px;">
-        <img src="img/kazumoni.webp" alt="スポーツ庁担当者1" style="border-radius:8px;" />
-        <div>
-          <h3>かずもに</h3>
-        </div>
-      </div>
-      <div class="politician-card" style="flex:1 1 250px;">
-        <div>
-          <h3></h3>
-        </div>
+  <section class="role-section">
+    <h2><i class="fas fa-football-ball"></i> スポーツ庁</h2>
+    <div class="roles-grid">
+      <div class="role-card">
+        <img src="img/kazumoni.webp" alt="かずもにさんの写真" />
+        <div class="role-name">かずもに</div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- サイバー庁 -->
-  <div class="minister-group" style="margin-bottom: 2rem;">
-    <h3 style="color:#001f3f; margin-bottom:1rem;">
-      <i class="fas fa-passport" style="margin-right:0.5rem; color:#001f3f;"></i>サイバー庁
-    </h3>
-    <div style="display:flex; gap:1rem; flex-wrap: wrap;">
-      <div class="politician-card" style="flex:1 1 250px;">
-        <img src="img/marisa.webp" alt="サイバー庁担当者1" style="border-radius:8px;" />
-        <div>
-          <h3>marisa</h3>
-        </div>
-      </div>
-      <div class="politician-card" style="flex:1 1 250px;">
-        <div>
-          <h3></h3>
-        </div>
+  <section class="role-section">
+    <h2><i class="fas fa-passport"></i> サイバー庁</h2>
+    <div class="roles-grid">
+      <div class="role-card">
+        <img src="img/marisa.webp" alt="marisaさんの写真" />
+        <div class="role-name">marisa</div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- 宮内省 -->
-  <div class="minister-group" style="margin-bottom: 2rem;">
-    <h3 style="color:#001f3f; margin-bottom:1rem;">
-      <i class="fas fa-crown" style="margin-right:0.5rem; color:#001f3f;"></i>天皇（宮内省）
-    </h3>
-    <div style="display:flex; gap:1rem; flex-wrap: wrap;">
-      <div class="politician-card" style="flex:1 1 250px;">
-        <img src="img/葵.webp" alt="宮内省担当者1" style="border-radius:8px;" />
-        <div>
-          <h3>葵</h3>
-        </div>
+  <section class="role-section">
+    <h2><i class="fas fa-crown"></i> 宮内省</h2>
+    <div class="roles-grid">
+      <div class="role-card">
+        <img src="img/葵.webp" alt="葵さんの写真" />
+        <div class="role-name">葵</div>
       </div>
-      <div class="politician-card" style="flex:1 1 250px;">
-        <img src="img/kyOm.webp" alt="宮内省担当者1" style="border-radius:8px;" />
-        <div>
-          <h3>ky0m</h3>
-        </div>
+      <div class="role-card">
+        <img src="img/kyOm.webp" alt="ky0mさんの写真" />
+        <div class="role-name">ky0m</div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- 経済産業省 -->
-  <div class="minister-group" style="margin-bottom: 2rem;">
-    <h3 style="color:#001f3f; margin-bottom:1rem;">
-      <i class="fas fa-chart-line" style="margin-right:0.5rem; color:#001f3f;"></i>経済産業省
-    </h3>
-    <div style="display:flex; gap:1rem; flex-wrap: wrap;">
-      <div class="politician-card" style="flex:1 1 250px;">
-        <img src="img/nekolnu.webp" alt="経済産業省担当者1" style="border-radius:8px;" />
-        <div>
-          <h3>nekoLnuβ</h3>
-        </div>
+  <section class="role-section">
+    <h2><i class="fas fa-chart-line"></i> 経済産業省</h2>
+    <div class="roles-grid">
+      <div class="role-card">
+        <img src="img/nekolnu.webp" alt="nekoLnuβさんの写真" />
+        <div class="role-name">nekoLnuβ</div>
       </div>
-      <div class="politician-card" style="flex:1 1 250px;">
-        <img src="img/らいむ.webp" alt="経済産業省担当者1" style="border-radius:8px;" />
-        <div>
-          <h3>ライム</h3>
-        </div>
+      <div class="role-card">
+        <img src="img/らいむ.webp" alt="ライムさんの写真" />
+        <div class="role-name">ライム</div>
       </div>
-      <div class="politician-card" style="flex:1 1 250px;">
-        <img src="img/zainin.webp" alt="経済産業省担当者1" style="border-radius:8px;" />
-        <div>
-          <h3>zainin</h3>
-        </div>
+      <div class="role-card">
+        <img src="img/zainin.webp" alt="zaininさんの写真" />
+        <div class="role-name">zainin</div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- 財務省 -->
-  <div class="minister-group" style="margin-bottom: 2rem;">
-    <h3 style="color:#001f3f; margin-bottom:1rem;">
-      <i class="fas fa-wallet" style="margin-right:0.5rem; color:#001f3f;"></i>財務省
-    </h3>
-    <div style="display:flex; gap:1rem; flex-wrap: wrap;">
-      <div class="politician-card" style="flex:1 1 250px;">
-        <img src="img/wani.webp" alt="財務省担当者1" style="border-radius:8px;" />
-        <div>
-          <h3>常磐　優希「ウニ」</h3>
-        </div>
+  <section class="role-section">
+    <h2><i class="fas fa-wallet"></i> 財務省</h2>
+    <div class="roles-grid">
+      <div class="role-card">
+        <img src="img/wani.webp" alt="常磐 優希「ウニ」さんの写真" />
+        <div class="role-name">常磐 優希「ウニ」</div>
       </div>
-      <div class="politician-card" style="flex:1 1 250px;">
-        <img src="img/くれは.webp" alt="財務省担当者2" style="border-radius:8px;" />
-        <div>
-          <h3>くれは</h3>
-        </div>
+      <div class="role-card">
+        <img src="img/くれは.webp" alt="くれはさんの写真" />
+        <div class="role-name">くれは</div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- 文部科学省 -->
-  <div class="minister-group" style="margin-bottom: 2rem;">
-    <h3 style="color:#001f3f; margin-bottom:1rem;">
-      <i class="fas fa-book" style="margin-right:0.5rem; color:#001f3f;"></i>文部科学省
-    </h3>
-    <div style="display:flex; gap:1rem; flex-wrap: wrap;">
-      <div class="politician-card" style="flex:1 1 250px;">
-        <img src="img/toto.png" alt="文部科学省担当者1" style="border-radius:8px;" />
-        <div>
-          <h3>トト</h3>
-        </div>
+  <section class="role-section">
+    <h2><i class="fas fa-book"></i> 文部科学省</h2>
+    <div class="roles-grid">
+      <div class="role-card">
+        <img src="img/toto.png" alt="トトさんの写真" />
+        <div class="role-name">トト</div>
       </div>
-      <div class="politician-card" style="flex:1 1 250px;">
-        <img src="img/ruba.webp" alt="文部科学省担当者1" style="border-radius:8px;" />
-        <div>
-          <h3>ルヴァ@おまねこ推し</h3>
-        </div>
+      <div class="role-card">
+        <img src="img/ruba2.webp" alt="ルヴァ@おまねこ推しさんの写真" />
+        <div class="role-name">ルヴァ@おまねこ推し</div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- 爆破部隊元帥 -->
-  <div class="minister-group" style="margin-bottom: 2rem;">
-    <h3 style="color:#001f3f; margin-bottom:1rem;">
-      <i class="fas fa-bomb" style="margin-right:0.5rem; color:#001f3f;"></i>爆破部隊元帥
-    </h3>
-    <div style="display:flex; gap:1rem; flex-wrap: wrap;">
-      <div class="politician-card" style="flex:1 1 250px;">
-        <img src="img/月.webp" alt="爆破部隊元帥担当者" style="border-radius:8px;" />
-        <div>
-          <h3>月（ルナ）（ネコ）</h3>
-        </div>
-      </div>
-      <div class="politician-card" style="flex:1 1 250px;">
-        <div>
-          <h3></h3>
-        </div>
+  <section class="role-section">
+    <h2><i class="fas fa-bomb"></i> 爆破部隊元帥</h2>
+    <div class="roles-grid">
+      <div class="role-card">
+        <img src="img/月.webp" alt="月（ルナ）（ネコ）さんの写真" />
+        <div class="role-name">月（ルナ）（ネコ）</div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- 軍事参謀大臣 -->
-  <div class="minister-group" style="margin-bottom: 2rem;">
-    <h3 style="color:#001f3f; margin-bottom:1rem;">
-      <i class="fas fa-fighter-jet" style="margin-right:0.5rem; color:#001f3f;"></i>軍事参謀大臣
-    </h3>
-    <div style="display:flex; gap:1rem; flex-wrap: wrap;">
-      <div class="politician-card" style="flex:1 1 250px;">
-        <img src="img/shun-game.webp" alt="軍事参謀大臣担当者" style="border-radius:8px;" />
-        <div>
-          <h3>shun_game11</h3>
-        </div>
-      </div>
-      <div class="politician-card" style="flex:1 1 250px;">
-        <div>
-          <h3></h3>
-        </div>
+  <section class="role-section">
+    <h2><i class="fas fa-fighter-jet"></i> 軍事参謀大臣</h2>
+    <div class="roles-grid">
+      <div class="role-card">
+        <img src="img/shun-game.webp" alt="shun_game11さんの写真" />
+        <div class="role-name">shun_game11</div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- 政治局委員会 -->
-  <div class="minister-group" style="margin-bottom: 2rem;">
-    <h3 style="color:#001f3f; margin-bottom:1rem;">
-      <i class="fas fa-landmark" style="margin-right:0.5rem; color:#001f3f;"></i>政治局委員会
-    </h3>
-    <div style="display:flex; gap:1rem; flex-wrap: wrap;">
-      <div class="politician-card" style="flex:1 1 250px;">
-        <img src="img/ちゃちゃ.webp" alt="政治局委員会担当者" style="border-radius:8px;" />
-        <div>
-          <h3>ちゃちゃ丸さん</h3>
-        </div>
+  <section class="role-section">
+    <h2><i class="fas fa-landmark"></i> 政治局委員会</h2>
+    <div class="roles-grid">
+      <div class="role-card">
+        <img src="img/ちゃちゃ.webp" alt="ちゃちゃ丸さんの写真" />
+        <div class="role-name">ちゃちゃ丸さん</div>
       </div>
-      <div class="politician-card" style="flex:1 1 250px;">
-        <img src="img/images.webp" alt="政治局委員会担当者" style="border-radius:8px;" />
-        <div>
-          <h3>れじすん</h3>
-        </div>
+      <div class="role-card">
+        <img src="img/images.webp" alt="れじすんさんの写真" />
+        <div class="role-name">れじすん</div>
       </div>
     </div>
-  </div>
+  </section>
+
 </section>
+
+
 <style>
-  #daijin {
-  padding: 2rem;
-  max-width: 900px;
-  margin: auto;
-}
+#daijin {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1rem 3rem;
+  }
+  #daijin > h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    color: #001f3f;
+  }
+  .role-section {
+    margin-bottom: 3rem;
+  }
+  .role-section > h2 {
+    font-size: 1.9rem;
+    border-bottom: 3px solid #00509e;
+    padding-bottom: 0.4rem;
+    margin-bottom: 1.6rem;
+  }
+  .roles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+    gap: 1.3rem 1.5rem;
+  }
+  .role-card {
+    background: #e6f0ff;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 0.1);
+    padding: 1rem;
+    text-align: center;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+  }
+  .role-card:hover {
+    box-shadow: 0 10px 20px rgb(0 0 0 / 0.15);
+    transform: translateY(-6px);
+  }
+  .role-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    color: #003366;
+  }
+  .role-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 0.8rem;
+    object-fit: cover;
+  }
+  .role-name {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #002244;
+    word-break: break-word;
+  }
+  .vacant {
+    background: #ffe6e6;
+    color: #d9534f;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #d9534f;
+    height: 170px;
+    border-radius: 12px;
+  }
 
-h2 {
-  text-align: center;
-  color: #001f3f;
-  margin-bottom: 2rem;
-  font-weight: 700;
-  font-size: 2rem;
-}
+  /* 内閣総理大臣カードを目立たせる */
+  .premier {
+    background: #cce5ff;
+    border: 2px solid #004085;
+  }
 
-.minister-group {
-  margin-bottom: 2rem;
-}
-
-.minister-group h3 {
-  color: #001f3f;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1.3rem;
-}
-
-.minister-group h3 i {
-  color: #001f3f;
-}
-
-.politician-cards {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.politician-card {
-  flex: 1 1 250px;
-  background: #f0f8ff;
-  border-radius: 8px;
-  padding: 0.8rem;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.politician-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 116, 217, 0.25);
-}
-
-.politician-card img {
-  border-radius: 8px;
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  margin-bottom: 0.5rem;
-}
-
-.politician-card h3 {
-  margin: 0;
-  font-size: 1.1rem;
-  color: #001f3f;
-  font-weight: 600;
-}
-
-/* 内閣総理大臣のみ特別目立たせる */
-.premier-minister {
-  margin-bottom: 3rem;
-  display: flex;
-  justify-content: center;
-}
-
-.premier-minister .politician-card {
-  flex: 0 0 260px;
-  max-width: 260px;
-  background-color: #cce4f7;
-  border: 3px solid #0074D9;
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 6px 15px rgba(0, 116, 217, 0.35);
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.premier-minister .politician-card img {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  border: 3px solid #0074D9;
-}
-
-.premier-minister .politician-card h3 {
-  margin-top: 0.8rem;
-  font-size: 1.2rem;
-  font-weight: 700;
-}
+  /* スマホ対応 */
+  @media (max-width: 480px) {
+    #daijin {
+      margin: 2rem 1rem;
+    }
+    .role-section > h2 {
+      font-size: 1.5rem;
+    }
+  }
 </style>
 
   <script>
