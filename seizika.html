@@ -5,480 +5,757 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>神日京国 政治家紹介</title>
   <link rel="icon" href="favicon.png" type="image/svg+xml">
-  <meta name="description" content="雑談・趣味・ゲームを楽しめるDiscordサーバー『神日京国』の公式ページ。誰でも参加歓迎！安全で活発なコミュニティへようこそ。">
+  <meta name="description" content="雑談・趣味・ゲームを楽しめるDiscordサーバー『神日京国』の公式ページ。誰でも参加歓迎！安全で活発なコミュニ communauté へようこそ。">
   <meta property="og:title" content="神日京国 - Discordサーバー" />
-  <meta property="og:description" content="雑談・趣味・ゲームを楽しめるDiscordサーバー『神日京国』の公式ページ。誰でも参加歓迎！安全で活発なコミュニティへようこそ。" />
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1385647827224625325/1386477074415616121/39_20250623074355.png" />
-  <meta property="og:url" content="https://xn--1lqq6rb1my3s.jp/seizika" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="神日京国 - Discordサーバー">
-  <meta name="twitter:description" content="雑談・趣味・ゲームを楽しめるDiscordサーバー『神日京国』の公式ページ。誰でも参加歓迎！安全で活発なコミュニティへようこそ。">
-  <meta name="twitter:image" content="https://cdn.discordapp.com/attachments/1385647827224625325/1386477074415616121/39_20250623074355.png">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Noto Sans JP', sans-serif;
-      scroll-behavior: smooth;
-      background-color: #f8f9fa;
+ <meta property="og:description" content="雑談・趣味・ゲームを楽しめるDiscordサーバー『神日京国』の公式ページ。誰でも参加歓迎！安全で活発なコミュニティへようこそ。" />
+ <meta property="og:image" content="https://cdn.discordapp.com/attachments/1385647827224625325/1386477074415616121/39_20250623074355.png" />
+ <meta property="og:url" content="https://xn--1lqq6rb1my3s.jp/seizika" />
+ <meta property="og:type" content="website" />
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="神日京国 - Discordサーバー">
+ <meta name="twitter:description" content="雑談・趣味・ゲームを楽しめるDiscordサーバー『神日京国』の公式ページ。誰でも参加歓迎！安全で活発なコミュニティへようこそ。">
+ <meta name="twitter:image" content="https://cdn.discordapp.com/attachments/1385647827224625325/1386477074415616121/39_20250623074355.png">
+ <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+ <style>
+
+  body {
+     margin: 0;
+   font-family: 'Noto Sans JP', sans-serif;
+   scroll-behavior: smooth;
+   background-color: #f8f9fa;
+   font-weight: 500; /* 全体のフォントの太さ調整 */
+  }
+
+  header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: #001f3f;
+   color: white;
+   padding: 1rem;
+   position: sticky;
+   top: 0;
+   z-index: 1000;
+  }
+
+  .logo {
+   font-size: 1.5rem;
+   font-weight: bold;
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+  }
+
+  .logo-test {
+   color: white;
+   text-decoration: none;
+  }
+
+  .nav-links {
+   list-style: none;
+   display: flex;
+   gap: 1rem;
+   margin: 0;
+   padding: 0;
+  }
+
+  .nav-links a {
+   color: white;
+   text-decoration: none;
+   font-weight: bold;
+   display: flex;
+   align-items: center;
+  }
+
+  .nav-links a i {
+   margin-right: 6px;
+  }
+
+  /* 既存のCSSはそのまま */
+
+/* 新しいスタイルを追加 */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* 背景を少し暗くする */
+  z-index: 1001; /* モーダルより手前に */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.profile-card-modal {
+  position: fixed;
+  bottom: -100%; /* 最初は画面外に隠す */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 12px; /* 角を少し丸める */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  z-index: 1002; /* オーバーレイより手前に */
+  padding: 0; /* paddingをリセットして内部で調整 */
+  transition: bottom 0.5s ease-out; /* 下からスライドするアニメーション */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* 角丸に合わせて内容を隠す */
+}
+
+.profile-card-modal.active {
+  bottom: 20px; /* 画面下から少し上がる位置 */
+}
+
+.profile-card-header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.1); /* 紹介文より少し黒くする */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.profile-card-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* アイコンを丸くする */
+  object-fit: cover;
+  margin-right: 15px;
+  border: 2px solid #001f3f; /* 既存のカードアイコンと同じ色 */
+}
+
+.profile-info {
+  flex-grow: 1;
+}
+
+.profile-card-name {
+  margin: 0;
+  font-size: 1.8rem; /* h1のサイズ */
+  color: #001f3f;
+  font-weight: 700;
+}
+
+.profile-card-occupation {
+  margin: 5px 0 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.profile-card-body {
+  padding: 20px;
+  background-color: white; /* 紹介文の背景 */
+  flex-grow: 1;
+  overflow-y: auto; /* 内容が多い場合にスクロール */
+  max-height: 200px; /* 必要に応じて調整 */
+  line-height: 1.6;
+  color: #333;
+}
+
+.profile-card-footer {
+  padding: 15px 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /* リンクが多い場合に折り返す */
+  justify-content: center;
+}
+
+.profile-card-footer a {
+  display: inline-flex;
+  align-items: center;
+  background-color: #0056b3;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.profile-card-footer a:hover {
+  background-color: #003d7a;
+}
+
+.profile-card-footer a i {
+  margin-right: 8px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #666;
+  cursor: pointer;
+  z-index: 10; /* 他の要素より手前に */
+  transition: color 0.2s ease;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+  .profile-card-modal.active {
+    bottom: 0; /* スマホでは下端に表示 */
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .profile-card-header {
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .profile-card-icon {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .profile-card-name {
+    font-size: 1.5rem;
+  }
+}
+
+/* カードと背景が連動してスクロールしないように、bodyにoverflow: hidden; を追加する */
+body.modal-open {
+  overflow: hidden;
+}
+
+  .menu-toggle {
+   display: none;
+   background: none;
+   border: none;
+   color: white;
+   font-size: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+   .menu-toggle {
+    display: block;
+   }
+
+   .desktop-menu {
+    display: none;
+    width: 100%;
+    background-color: #001f3f;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+   }
+
+   .desktop-menu.open {
+    display: flex;
+   }
+
+   .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+   }
+
+   .nav-links a {
+    padding: 0.5rem;
+   }
+  }
+
+  /* 政治家紹介セクション */
+  #seizika {
+   padding: 2rem;
+   max-width: 900px;
+   margin: auto;
+  }
+
+  #seizika h2 {
+   text-align: center;
+   color: #001f3f;
+   margin-bottom: 2rem;
+   font-weight: 700;
+   font-size: 2rem;
+  }
+
+  .politician-card {
+   background: white;
+   border-radius: 8px;
+   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+   padding: 1.5rem;
+   margin-bottom: 1.5rem;
+
+   display: flex;
+   gap: 1rem;
+   align-items: center;
+   transition: transform 0.2s ease, box-shadow 0.2s ease;
+   cursor: default;
+  }
+    /* aタグで囲むので、politician-cardのスタイルをaタグにも適用 */
+    .role-card-link {
+        text-decoration: none; /* アンダーラインを消す */
+        color: inherit; /* テキスト色を継承 */
     }
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #001f3f;
-      color: white;
-      padding: 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+  .politician-card:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+
+  .politician-card img {
+   border-radius: 50%;
+   width: 100px;
+   height: 100px;
+   object-fit: cover;
+   flex-shrink: 0;
+   border: 2px solid #001f3f;
+  }
+
+  .politician-card h3 {
+   margin: 0 0 0.5rem 0;
+   color: #001f3f;
+   font-weight: 700;
+   font-size: 1.25rem;
+  }
+
+  .politician-card p {
+   margin: 0 0 0.3rem 0;
+   color: #333;
+   font-size: 1rem;
+   line-height: 1.4;
+  }
+
+    /* 大臣紹介セクションのスタイル */
+    #daijin {
+        max-width: 900px;
+        margin: 3rem auto;
+        padding: 0 1rem 3rem;
     }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+    #daijin > h1 {
+        text-align: center;
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin-bottom: 2.5rem;
+        color: #001f3f;
     }
-
-    .logo-test {
-      color: white;
-      text-decoration: none;
+    .role-section {
+        margin-bottom: 3rem;
     }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 1rem;
-      margin: 0;
-      padding: 0;
+    .role-section > h2 {
+        font-size: 1.9rem;
+        border-bottom: 3px solid #00509e;
+        padding-bottom: 0.4rem;
+        margin-bottom: 1.6rem;
     }
-
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
+    .roles-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1.3rem 1.5rem;
     }
-
-    .nav-links a i {
-      margin-right: 6px;
-    }
-
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      color: white;
-      font-size: 1.5rem;
-    }
-
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-      }
-
-      .desktop-menu {
-        display: none;
-        width: 100%;
-        background-color: #001f3f;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        flex-direction: column;
-      }
-
-      .desktop-menu.open {
-        display: flex;
-      }
-
-      .nav-links {
-        flex-direction: column;
-        gap: 0.5rem;
+    .role-card {
+        background: #e6f0ff;
+        border-radius: 12px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
         padding: 1rem;
-      }
-
-      .nav-links a {
-        padding: 0.5rem;
-      }
+        text-align: center;
+        transition: box-shadow 0.25s ease, transform 0.25s ease;
+    }
+    .role-card:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        transform: translateY(-6px);
+    }
+    .role-title {
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-bottom: 0.9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.4rem;
+        color: #003366;
+    }
+    .role-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 0.8rem;
+        object-fit: cover;
+    }
+    .role-name {
+        font-weight: 600;
+        font-size: 1rem;
+        color: #002244;
+        word-break: break-word;
     }
 
-
-    /* 政治家紹介セクション */
-    #seizika {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
+    .role-card.highlight {
+        background-color: #ffe4e1; /* ピンク系の背景色 */
+        border: 2px solid #ff69b4; /* 強調する枠線 */
+        border-radius: 10px;
+    }
+    
+    .vacant {
+        background: #ffe6e6;
+        color: #d9534f;
+        font-weight: 700;
+        font-size: 1.1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px dashed #d9534f;
+        height: 170px;
+        border-radius: 12px;
     }
 
-    #seizika h2 {
-      text-align: center;
-      color: #001f3f;
-      margin-bottom: 2rem;
-      font-weight: 700;
-      font-size: 2rem;
+    /* 内閣総理大臣カードを目立たせる */
+    .premier {
+        background: linear-gradient(145deg, #fff8dc, #ffd700);
+        border: 2px solid #daa520;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #ffd700;
     }
 
-    .politician-card {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      cursor: default;
+    /* スマホ対応 */
+    @media (max-width: 480px) {
+        #daijin {
+            margin: 2rem 1rem;
+        }
+        .role-section > h2 {
+            font-size: 1.5rem;
+        }
     }
-
-    .politician-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    }
-
-    .politician-card img {
-      border-radius: 50%;
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      flex-shrink: 0;
-      border: 2px solid #001f3f;
-    }
-
-    .politician-card h3 {
-      margin: 0 0 0.5rem 0;
-      color: #001f3f;
-      font-weight: 700;
-      font-size: 1.25rem;
-    }
-
-    .politician-card p {
-      margin: 0 0 0.3rem 0;
-      color: #333;
-      font-size: 1rem;
-      line-height: 1.4;
-    }
-  </style>
+ </style>
 </head>
 <body>
 
-  <header>
-    <div class="logo">
-      <i class="fas fa-mountain-sun"></i> <a href="/" class="logo-test">神日京国</a>
-    </div>
+ <header>
+  <div class="logo">
+   <i class="fas fa-mountain-sun"></i> <a href="/" class="logo-test">神日京国</a>
+  </div>
 
-    <!-- スマホ用ハンバーガーボタン -->
     <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
-      <i class="fas fa-bars"></i>
-    </button>
+   <i class="fas fa-bars"></i>
+  </button>
 
-    <!-- ナビゲーションメニュー -->
     <nav class="desktop-menu" id="nav-menu">
-      <ul class="nav-links">
-        <li><a href="/"><i class="fas fa-home"></i> ホーム</a></li>
-        <li><a href="kuni"><i class="fas fa-landmark"></i> 国紹介</a></li>
-        <li><a href="kankou"><i class="fas fa-map-marked-alt"></i> 観光</a></li>
-        <li><a href="syoukai"><i class="fas fa-info-circle"></i> 紹介</a></li>
-        <li><a href="tokutyou"><i class="fas fa-star"></i> 特徴</a></li>
-        <li><a href="https://discord.com/invite/haP3jjVWku"><i class="fab fa-discord"></i> 参加</a></li>
-      </ul>
-    </nav>
-  </header>
+   <ul class="nav-links">
+    <li><a href="/"><i class="fas fa-home"></i> ホーム</a></li>
+    <li><a href="kuni"><i class="fas fa-landmark"></i> 国紹介</a></li>
+    <li><a href="kankou"><i class="fas fa-map-marked-alt"></i> 観光</a></li>
+    <li><a href="syoukai"><i class="fas fa-info-circle"></i> 紹介</a></li>
+    <li><a href="tokutyou"><i class="fas fa-star"></i> 特徴</a></li>
+    <li><a href="https://discord.com/invite/haP3jjVWku"><i class="fab fa-discord"></i> 参加</a></li>
+   </ul>
+  </nav>
+ </header>
 
-<section id="daijin">
-  <h1><i class="fas fa-users" style="margin-right:0.5rem; color:#001f3f;"></i>大臣紹介</h1>
+ <section id="daijin">
+    <h1><i class="fas fa-users" style="margin-right:0.5rem; color:#001f3f;"></i>大臣紹介</h1>
 
-  <!-- 内閣総理大臣 -->
-  <section class="role-section">
-    <h2><i class="fas fa-user-tie"></i> 内閣総理大臣</h2>
-    <div class="roles-grid">
-      <div class="role-card premier">
-        <img src="img/yuyuto.webp" alt="ゆゆとさんの写真" />
-        <div class="role-name">ゆゆと</div>
+    <section class="role-section">
+      <h2><i class="fas fa-user-tie"></i> 内閣総理大臣</h2>
+      <div class="roles-grid">
+        <div class="role-card premier"
+             data-name="ゆゆと"
+             data-occupation="内閣総理大臣"
+             data-image="img/yuyuto.webp"
+             data-description="ここにゆゆとさんの経歴や行っていることなどの紹介文が入ります。この部分は長くても大丈夫です。"
+             data-links='[{"icon":"fab fa-youtube", "url":"#", "label":"YouTube"}, {"icon":"fab fa-twitter", "url":"#", "label":"X (旧Twitter)"}]'>
+          <img src="img/yuyuto.webp" alt="ゆゆとさんの写真" />
+          <div class="role-name">ゆゆと</div>
+        </div>
       </div>
+    </section>
+
+    <section class="role-section">
+  <h2><i class="fas fa-shield-alt"></i> 防衛大臣</h2>
+  <div class="roles-grid">
+    <div class="role-card highlight"
+         data-name="紅蓮ノヴァ"
+         data-occupation="防衛大臣"
+         data-image="img/ノヴァ.webp"
+         data-description="紅蓮ノヴァさんの紹介文です。防衛大臣として国の安全保障に貢献しています。長年の経験と戦略的思考で、常に最前線で活動しています。"
+         data-links='[{"icon":"fab fa-twitter", "url":"https://twitter.com/novas_guren", "label":"X (旧Twitter)"}]'>
+      <img src="img/ノヴァ.webp" alt="紅蓮ノヴァさんの写真" />
+      <div class="role-name">紅蓮ノヴァ</div>
     </div>
-  </section>
 
-  <!-- 防衛大臣 -->
-  <section class="role-section">
-    <h2><i class="fas fa-shield-alt"></i> 防衛大臣</h2>
-    <div class="roles-grid">
-      <div class="role-card highlight">
-        <img src="img/ノヴァ.webp" alt="紅蓮ノヴァさんの写真" />
-        <div class="role-name">紅蓮ノヴァ</div>
-      </div>
-      <div class="role-card ">
-        <img src="img/ガンバ.webp" alt="ガンバさんの写真" />
-        <div class="role-name">ガンバルガンバくん！</div>
-      </div>
+    <div class="role-card "
+         data-name="ガンバルガンバくん！"
+         data-occupation="防衛大臣"
+         data-image="img/ガンバ.webp"
+         data-description="ガンバルガンバくん！さんの紹介文です。若手ながら防衛分野で頭角を現しており、新しい技術の導入にも積極的です。"
+         data-links='[{"icon":"fab fa-youtube", "url":"https://www.youtube.com/channel/ganba_kun", "label":"YouTube"}]'>
+      <img src="img/ガンバ.webp" alt="ガンバさんの写真" />
+      <div class="role-name">ガンバルガンバくん！</div>
     </div>
-  </section>
-
-  <!-- 国土交通省 -->
-  <section class="role-section">
-    <h2><i class="fas fa-road"></i> 国土交通省</h2>
-    <div class="roles-grid">
-      <div class="role-card highlight">
-        <img src="img/KJ.webp" alt="KJ_87さんの写真" />
-        <div class="role-name">KJ_87</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 鉄道庁 -->
-  <section class="role-section">
-    <h2><i class="fas fa-train"></i> 鉄道庁</h2>
-    <div class="roles-grid">
-      <div class="role-card highlight">
-        <img src="img/finneko0.webp" alt="フィンネッコさんの写真" />
-        <div class="role-name">フィンネッコ</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- スポーツ庁 -->
-  <section class="role-section">
-    <h2><i class="fas fa-football-ball"></i> スポーツ庁</h2>
-    <div class="roles-grid">
-      <div class="role-card highlight">
-        <img src="img/kazumoni.webp" alt="かずもにさんの写真" />
-        <div class="role-name">かずもに</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- サイバー庁 -->
-  <section class="role-section">
-    <h2><i class="fas fa-passport"></i> サイバー庁</h2>
-    <div class="roles-grid">
-      <div class="role-card highlight">
-        <img src="img/marisa.webp" alt="marisaさんの写真" />
-        <div class="role-name">marisa</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 宮内省 -->
-  <section class="role-section">
-    <h2><i class="fas fa-crown"></i> 宮内省</h2>
-    <div class="roles-grid">
-      <div class="role-card highlight">
-        <img src="img/葵.webp" alt="葵さんの写真" />
-        <div class="role-name">葵</div>
-      </div>
-      <div class="role-card">
-        <img src="img/kyOm.webp" alt="ky0mさんの写真" />
-        <div class="role-name">ky0m</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 経済産業省 -->
-  <section class="role-section">
-    <h2><i class="fas fa-chart-line"></i> 経済産業省</h2>
-    <div class="roles-grid">
-      <div class="role-card highlight">
-        <img src="img/nekolnu.webp" alt="nekoLnuβさんの写真" />
-        <div class="role-name">nekoLnuβ</div>
-      </div>
-      <div class="role-card">
-        <img src="img/らいむ.webp" alt="ライムさんの写真" />
-        <div class="role-name">ライム</div>
-      </div>
-      <div class="role-card">
-        <img src="img/zainin.webp" alt="zaininさんの写真" />
-        <div class="role-name">zainin</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 財務省 -->
-  <section class="role-section">
-    <h2><i class="fas fa-wallet"></i> 財務省</h2>
-    <div class="roles-grid">
-      <div class="role-card highlight">
-        <img src="img/wani.webp" alt="常磐 優希「ウニ」さんの写真" />
-        <div class="role-name">常磐 優希「ウニ」</div>
-      </div>
-      <div class="role-card">
-        <img src="img/くれは.webp" alt="くれはさんの写真" />
-        <div class="role-name">くれは</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 文部科学省 -->
-  <section class="role-section">
-    <h2><i class="fas fa-book"></i> 文部科学省</h2>
-    <div class="roles-grid">
-      <div class="role-card highlight">
-        <img src="img/toto.png" alt="トトさんの写真" />
-        <div class="role-name">トト</div>
-      </div>
-      <div class="role-card">
-        <img src="img/ruba2.webp" alt="ルヴァ@おまねこ推しさんの写真" />
-        <div class="role-name">ルヴァ@おまねこ推し</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 爆破部隊元帥 -->
-  <section class="role-section">
-    <h2><i class="fas fa-bomb"></i> 爆破部隊元帥</h2>
-    <div class="roles-grid">
-      <div class="role-card highlight">
-        <img src="img/月.webp" alt="月（ルナ）（ネコ）さんの写真" />
-        <div class="role-name">月（ルナ）（ネコ）</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 軍事参謀大臣 -->
-  <section class="role-section">
-    <h2><i class="fas fa-fighter-jet"></i> 軍事参謀大臣</h2>
-    <div class="roles-grid">
-      <div class="role-card highlight">
-        <img src="img/shun-game.webp" alt="shun_game11さんの写真" />
-        <div class="role-name">shun_game11</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 政治局委員会 -->
-  <section class="role-section">
-    <h2><i class="fas fa-landmark"></i> 政治局委員会</h2>
-    <div class="roles-grid">
-      <div class="role-card highlight">
-        <img src="img/ちゃちゃ.webp" alt="ちゃちゃ丸さんの写真" />
-        <div class="role-name">ちゃちゃ丸さん</div>
-      </div>
-      <div class="role-card">
-        <img src="img/images.webp" alt="れじすんさんの写真" />
-        <div class="role-name">れじすん</div>
-      </div>
-    </div>
-  </section>
-
+  </div>
 </section>
 
+<section class="role-section">
+  <h2><i class="fas fa-road"></i> 国土交通省</h2>
+  <div class="roles-grid">
+    <div class="role-card highlight"
+         data-name="KJ_87"
+         data-occupation="国土交通大臣"
+         data-image="img/KJ.webp"
+         data-description="国土交通大臣として働いて活躍しています。しかし活動範囲は国土交通省の中にとどまらずに、神日京国HP作りに大いに貢献しています。"
+         data-links='[{"icon":"fab fa-twitter", "url":"https://twitter.com/novas_guren", "label":"X (旧Twitter)"}]'>
+      <img src="img/KJ.webp" alt="KJ_87の写真" />
+    <div class="role-name">KJ_87</div>
+   </div>
+  </div>
+ </section>
 
-<style>
-#daijin {
-    max-width: 900px;
-    margin: 3rem auto;
-    padding: 0 1rem 3rem;
-  }
-  #daijin > h1 {
-    text-align: center;
-    font-size: 2.8rem;
-    font-weight: 700;
-    margin-bottom: 2.5rem;
-    color: #001f3f;
-  }
-  .role-section {
-    margin-bottom: 3rem;
-  }
-  .role-section > h2 {
-    font-size: 1.9rem;
-    border-bottom: 3px solid #00509e;
-    padding-bottom: 0.4rem;
-    margin-bottom: 1.6rem;
-  }
-  .roles-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
-    gap: 1.3rem 1.5rem;
-  }
-  .role-card {
-    background: #e6f0ff;
-    border-radius: 12px;
-    box-shadow: 0 3px 6px rgb(0 0 0 / 0.1);
-    padding: 1rem;
-    text-align: center;
-    transition: box-shadow 0.25s ease, transform 0.25s ease;
-  }
-  .role-card:hover {
-    box-shadow: 0 10px 20px rgb(0 0 0 / 0.15);
-    transform: translateY(-6px);
-  }
-  .role-title {
-    font-weight: 700;
-    font-size: 1.1rem;
-    margin-bottom: 0.9rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.4rem;
-    color: #003366;
-  }
-  .role-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 0.8rem;
-    object-fit: cover;
-  }
-  .role-name {
-    font-weight: 600;
-    font-size: 1rem;
-    color: #002244;
-    word-break: break-word;
-  }
+  <section class="role-section">
+  <h2><i class="fas fa-train"></i> 鉄道庁</h2>
+  <div class="roles-grid">
+  <div class="role-card highlight"
+      data-name="フィンネッコ"
+      data-occupation="鉄道大臣"
+      data-image="img/finneko0.webp"
+     data-description="鉄道大臣としてマインクラフトにて鉄道建設に尽力したり、本国の鉄道路線を考えたりしていました。そして神日京国の地図を計測しました。"
+      data-links='[{"icon":"fab fa-twitter", "url":"https://twitter.com/novas_guren", "label":"X (旧Twitter)"}]'>
+    <img src="img/finneko0.webp" alt="フィンネッコさんの写真" />
+    <div class="role-name">フィンネッコ</div>
+   </div>
+  </div>
+ </section>
 
-  .role-card.highlight {
-    background-color: #ffe4e1; /* ピンク系の背景色 */
-    border: 2px solid #ff69b4; /* 強調する枠線 */
-    border-radius: 10px;
-  }
-  
-  .vacant {
-    background: #ffe6e6;
-    color: #d9534f;
-    font-weight: 700;
-    font-size: 1.1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px dashed #d9534f;
-    height: 170px;
-    border-radius: 12px;
-  }
+  <section class="role-section">
+  <h2><i class="fas fa-football-ball"></i> スポーツ庁</h2>
+  <div class="roles-grid">
+   <div class="role-card highlight"
+      data-name="かずもに"
+      data-occupation="スポーツ大臣"
+      data-image="img/kazumoni.webp"
+      data-description="スポーツ大臣としてスポーツ庁にて主にサイクリング情報を発信しています。「今日も一日健康に！」や「埼玉県はこれから雨が降り、多湿になることが予想されます。体調不良に気をつけて明日も体力をつけていきましょう！！」などのスポーツなどに役立つ情報を発信しています。"
+      data-links='[{"icon":"fab fa-twitter", "url":"https://twitter.com/novas_guren", "label":"X (旧Twitter)"}]'>
+    <img src="img/kazumoni.webp" alt="かずもにさんの写真" />
+    <div class="role-name">かずもに</div>
+   </div>
+  </div>
+ </section>
 
-  /* 内閣総理大臣カードを目立たせる */
-  .premier {
-    background: linear-gradient(145deg, #fff8dc, #ffd700);
-  　border: 2px solid #daa520;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #ffd700;
-  }
+  <section class="role-section">
+  <h2><i class="fas fa-passport"></i> サイバー庁</h2>
+  <div class="roles-grid">
+   <div class="role-card highlight"
+    data-name="marisa"
+      data-occupation="サイバー大臣"
+      data-image="img/marisa.webp"
+      data-description="このサーバーの経済の中心になっているゲームBOT V2を運営しています。今はマインクラフトで経済機能を実装しようとしており、ゲームBOT V2と連動させようと計画しています。"
+      data-links='[{"icon":"fab fa-twitter", "url":"https://twitter.com/novas_guren", "label":"X (旧Twitter)"}]'>
+    <img src="img/marisa.webp" alt="marisaさんの写真" />
+    <div class="role-name">marisa</div>
+   </div>
+  </div>
+ </section>
 
-  /* スマホ対応 */
-  @media (max-width: 480px) {
-    #daijin {
-      margin: 2rem 1rem;
-    }
-    .role-section > h2 {
-      font-size: 1.5rem;
-    }
-  }
-</style>
+  <section class="role-section">
+  <h2><i class="fas fa-crown"></i> 宮内省</h2>
+  <div class="roles-grid">
+   <div class="role-card highlight">
+    <img src="img/葵.webp" alt="葵さんの写真" />
+    <div class="role-name">葵</div>
+   </div>
+   <div class="role-card">
+    <img src="img/kyOm.webp" alt="ky0mさんの写真" />
+    <div class="role-name">ky0m</div>
+   </div>
+  </div>
+ </section>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const toggleButton = document.getElementById("menu-toggle");
-      const navMenu = document.getElementById("nav-menu");
+  <section class="role-section">
+  <h2><i class="fas fa-chart-line"></i> 経済産業省</h2>
+  <div class="roles-grid">
+   <div class="role-card highlight">
+    <img src="img/nekolnu.webp" alt="nekoLnuβさんの写真" />
+    <div class="role-name">nekoLnuβ</div>
+   </div>
+   <div class="role-card">
+    <img src="img/らいむ.webp" alt="ライムさんの写真" />
+    <div class="role-name">ライム</div>
+   </div>
+   <div class="role-card">
+    <img src="img/zainin.webp" alt="zaininさんの写真" />
+    <div class="role-name">zainin</div>
+   </div>
+  </div>
+ </section>
 
-      toggleButton.addEventListener("click", () => {
-        navMenu.classList.toggle("open");
+  <section class="role-section">
+  <h2><i class="fas fa-wallet"></i> 財務省</h2>
+  <div class="roles-grid">
+   <div class="role-card highlight">
+    <img src="img/wani.webp" alt="常磐 優希「ウニ」さんの写真" />
+    <div class="role-name">常磐 優希「ウニ」</div>
+   </div>
+   <div class="role-card">
+    <img src="img/くれは.webp" alt="くれはさんの写真" />
+    <div class="role-name">くれは</div>
+   </div>
+  </div>
+ </section>
+
+  <section class="role-section">
+  <h2><i class="fas fa-book"></i> 文部科学省</h2>
+  <div class="roles-grid">
+   <div class="role-card highlight">
+    <img src="img/toto.png" alt="トトさんの写真" />
+    <div class="role-name">トト</div>
+   </div>
+   <div class="role-card">
+    <img src="img/ruba2.webp" alt="ルヴァ@おまねこ推しさんの写真" />
+    <div class="role-name">ルヴァ@おまねこ推し</div>
+   </div>
+  </div>
+ </section>
+
+  <section class="role-section">
+  <h2><i class="fas fa-bomb"></i> 爆破部隊元帥</h2>
+  <div class="roles-grid">
+   <div class="role-card highlight">
+    <img src="img/月.webp" alt="月（ルナ）（ネコ）さんの写真" />
+    <div class="role-name">月（ルナ）（ネコ）</div>
+   </div>
+  </div>
+ </section>
+
+    <section class="role-section">
+      <h2><i class="fas fa-fighter-jet"></i> 軍事参謀大臣</h2>
+      <div class="roles-grid">
+        <div class="role-card highlight"
+             data-name="shun_game11"
+             data-occupation="軍事参謀大臣"
+             data-image="img/shun-game.webp"
+             data-description="shun_game11さんの紹介文です。彼の軍事戦略における貢献や、日々の活動について詳しく書かれています。国家の安全保障に深く関わっており、その知識と経験は計り知れません。"
+             data-links='[{"icon":"fab fa-youtube", "url":"https://www.youtube.com/channel/YOUR_YOUTUBE_ID", "label":"YouTube"}, {"icon":"fab fa-twitter", "url":"https://twitter.com/YOUR_TWITTER_ID", "label":"X (旧Twitter)"}]'>
+          <img src="img/shun-game.webp" alt="shun_game11さんの写真" />
+          <div class="role-name">shun_game11</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="role-section">
+  <h2><i class="fas fa-landmark"></i> 政治局委員会</h2>
+  <div class="roles-grid">
+   <div class="role-card highlight">
+    <img src="img/ちゃちゃ.webp" alt="ちゃちゃ丸さんの写真" />
+    <div class="role-name">ちゃちゃ丸さん</div>
+   </div>
+   <div class="role-card">
+    <img src="img/images.webp" alt="れじすんさんの写真" />
+    <div class="role-name">れじすん</div>
+   </div>
+  </div>
+ </section>
+
+    </section>
+
+  <div class="overlay" id="overlay"></div>
+  <div class="profile-card-modal" id="profileCardModal">
+    <div class="profile-card-header">
+      <img src="" alt="人物アイコン" class="profile-card-icon" id="modalIcon">
+      <div class="profile-info">
+        <h1 class="profile-card-name" id="modalName"></h1>
+        <p class="profile-card-occupation" id="modalOccupation"></p>
+      </div>
+    </div>
+    <div class="profile-card-body">
+      <p class="profile-card-description" id="modalDescription"></p>
+    </div>
+    <div class="profile-card-footer" id="modalLinks">
+      </div>
+    <button class="close-button" id="closeButton"><i class="fas fa-times"></i></button>
+  </div>
+
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+   const toggleButton = document.getElementById("menu-toggle");
+   const navMenu = document.getElementById("nav-menu");
+
+   toggleButton.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
+   });
+  });
+  document.addEventListener("DOMContentLoaded", function () {
+  const toggleButton = document.getElementById("menu-toggle");
+  const navMenu = document.getElementById("nav-menu");
+  const roleCards = document.querySelectorAll(".role-card"); // 各人物のカード
+  const overlay = document.getElementById("overlay");
+  const profileCardModal = document.getElementById("profileCardModal");
+  const closeButton = document.getElementById("closeButton");
+
+  const modalIcon = document.getElementById("modalIcon");
+  const modalName = document.getElementById("modalName");
+  const modalOccupation = document.getElementById("modalOccupation");
+  const modalDescription = document.getElementById("modalDescription");
+  const modalLinks = document.getElementById("modalLinks");
+
+  toggleButton.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
+  });
+
+  // 各人物カードにクリックイベントを追加
+  roleCards.forEach(card => {
+    card.addEventListener("click", () => {
+      const name = card.dataset.name;
+      const occupation = card.dataset.occupation;
+      const image = card.dataset.image;
+      const description = card.dataset.description;
+      const links = JSON.parse(card.dataset.links || '[]'); // JSON文字列をパース
+
+      // モーダルに情報をセット
+      modalIcon.src = image;
+      modalIcon.alt = `${name}さんのアイコン`;
+      modalName.textContent = name;
+      modalOccupation.textContent = occupation;
+      modalDescription.textContent = description;
+
+      // リンクを動的に生成して追加
+      modalLinks.innerHTML = ''; // 既存のリンクをクリア
+      links.forEach(link => {
+        const a = document.createElement('a');
+        a.href = link.url;
+        a.target = '_blank'; // 新しいタブで開く
+        a.rel = 'noopener noreferrer'; // セキュリティ対策
+        const icon = document.createElement('i');
+        icon.className = link.icon;
+        a.appendChild(icon);
+        a.appendChild(document.createTextNode(link.label));
+        modalLinks.appendChild(a);
       });
+
+      // モーダルとオーバーレイを表示
+      overlay.classList.add("active");
+      profileCardModal.classList.add("active");
+      document.body.classList.add("modal-open"); // 背景スクロールを禁止
     });
-  </script>
+  });
+
+  // 閉じるボタンとオーバーレイをクリックでモーダルを非表示
+  function closeProfileCard() {
+    overlay.classList.remove("active");
+    profileCardModal.classList.remove("active");
+    document.body.classList.remove("modal-open"); // 背景スクロールを許可
+  }
+
+  closeButton.addEventListener("click", closeProfileCard);
+  overlay.addEventListener("click", closeProfileCard);
+});
+ </script>
 </body>
 </html>
